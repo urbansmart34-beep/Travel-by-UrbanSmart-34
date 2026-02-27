@@ -1,0 +1,1 @@
+[('811298f2-31aa-4e90-9071-41999bfe47a0', 'UrbanSmart Demo Store', 'sk_test_urbansmart_store_1'), ('9b54cdb9-d945-4af0-b43a-80dba48dc7ef', 'STORE_CAP_01', 'sk_test_store1'), ('0995ddc2-188b-455a-b2f5-dbd9d23dcfad', 'STORE_JHB_04', 'sk_test_store2'), ('cf2e099d-290c-4d41-a25e-b67785c12b68', 'Test Merchant Store', 'pk_test_76s4alyr6qxmkmoy')]
