@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Popular Rideshare Routes Directory - UrbanSmart-34</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13daec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 bg-white/90 backdrop-blur-md px-4 py-3 dark:border-slate-800 dark:bg-slate-900/90 lg:px-10">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">TRAVEL <span class="text-primary">by UrbanSmart-34</span></h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-9">
+<a class="text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Book a Ride</a>
+<a class="text-slate-900 dark:text-white text-sm font-bold leading-normal border-b-2 border-primary pb-0.5" href="#">Routes</a>
+<a class="text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">About</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-slate-900 text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">
+<span class="truncate">Log In</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold leading-normal hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+</div>
+<div class="flex md:hidden">
+<button class="p-2 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<div class="layout-container flex h-full grow flex-col">
+<!-- Hero Search Section -->
+<div class="w-full bg-slate-900 py-12 md:py-20 relative overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-40">
+<img alt="South African highway traffic at sunset" class="w-full h-full object-cover" data-alt="Blurred highway traffic at sunset showing movement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlS15kWW7mPmbK0yav0IxYPwBjjw8TdTQ3QJ2lQrSu_VvcfM4bFJqhfOVGmJHfglfNAo12r_fJ-c780Z5nE7_qFz2RiQZyoFSEt0w8HWCdX8Sg3Sz13LkPACa9uFWCWnbPXq26J-el3guax5X1lAC8Q5P83Xld9WMbOG4Tgmyfowb3KIoF7TYpj0YxoRgRyjsUmtjoM4gJyhT-KVi0J5nG3qAr8gQovGUAesOv80hjS5MtZpJxxWw-tq9xd8iN9uaxVIpwSguy_Rg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+</div>
+<div class="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
+<span class="inline-flex items-center rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary ring-1 ring-inset ring-primary/30 mb-6">
+                        Updated Daily Schedules
+                    </span>
+<h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-4 max-w-3xl">
+                        Find Your Way: Popular Rideshare Routes
+                    </h1>
+<p class="text-slate-300 text-base md:text-lg mb-8 max-w-2xl">
+                        Explore the most frequented routes across South Africa with transparent pricing, live availability, and reliable schedules.
+                    </p>
+<div class="w-full max-w-2xl bg-white dark:bg-slate-800 p-2 rounded-xl shadow-xl flex flex-col sm:flex-row gap-2">
+<div class="flex-1 flex items-center px-4 h-12 border-b sm:border-b-0 sm:border-r border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-slate-400 mr-2">my_location</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-slate-900 dark:text-white placeholder-slate-400" placeholder="From (e.g. Cape Town)" type="text"/>
+</div>
+<div class="flex-1 flex items-center px-4 h-12">
+<span class="material-symbols-outlined text-slate-400 mr-2">pin_drop</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-slate-900 dark:text-white placeholder-slate-400" placeholder="To (e.g. Stellenbosch)" type="text"/>
+</div>
+<button class="bg-primary hover:bg-cyan-400 text-slate-900 font-bold h-12 px-8 rounded-lg transition-colors flex items-center justify-center gap-2 w-full sm:w-auto">
+<span class="material-symbols-outlined">search</span>
+<span>Search</span>
+</button>
+</div>
+</div>
+</div>
+<main class="container mx-auto px-4 py-8 flex-1">
+<!-- Regional Filters -->
+<div class="flex flex-col md:flex-row justify-between items-center border-b border-slate-200 dark:border-slate-800 pb-2 mb-8 gap-4 overflow-x-auto w-full">
+<div class="flex gap-6 min-w-max">
+<a class="flex flex-col items-center border-b-[3px] border-b-slate-900 dark:border-b-primary pb-3 text-slate-900 dark:text-white" href="#">
+<span class="text-sm font-bold tracking-wide">All Regions</span>
+</a>
+<a class="flex flex-col items-center border-b-[3px] border-b-transparent hover:border-b-slate-300 dark:hover:border-b-slate-600 pb-3 text-slate-500 dark:text-slate-400 transition-colors" href="#">
+<span class="text-sm font-bold tracking-wide">Western Cape</span>
+</a>
+<a class="flex flex-col items-center border-b-[3px] border-b-transparent hover:border-b-slate-300 dark:hover:border-b-slate-600 pb-3 text-slate-500 dark:text-slate-400 transition-colors" href="#">
+<span class="text-sm font-bold tracking-wide">Gauteng</span>
+</a>
+<a class="flex flex-col items-center border-b-[3px] border-b-transparent hover:border-b-slate-300 dark:hover:border-b-slate-600 pb-3 text-slate-500 dark:text-slate-400 transition-colors" href="#">
+<span class="text-sm font-bold tracking-wide">KwaZulu-Natal</span>
+</a>
+<a class="flex flex-col items-center border-b-[3px] border-b-transparent hover:border-b-slate-300 dark:hover:border-b-slate-600 pb-3 text-slate-500 dark:text-slate-400 transition-colors" href="#">
+<span class="text-sm font-bold tracking-wide">Eastern Cape</span>
+</a>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 whitespace-nowrap">
+<span class="material-symbols-outlined text-lg">sort</span>
+<span>Sort by: Popularity</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Main Route List -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- Section: Western Cape -->
+<div>
+<div class="flex items-center justify-between mb-5">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Top Routes in Western Cape</h2>
+<a class="text-primary text-sm font-bold hover:underline" href="#">View All (42)</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Card 1 -->
+<div class="group relative flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 transition-all hover:shadow-lg hover:border-primary/50 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-primary/50">
+<div class="mb-4">
+<div class="flex items-center justify-between mb-2">
+<span class="rounded-md bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary ring-1 ring-inset ring-primary/20">Popular</span>
+<button class="text-slate-400 hover:text-red-500 transition-colors"><span class="material-symbols-outlined text-[20px]">favorite</span></button>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Cape Town ➝ Stellenbosch</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">via N1 Highway</p>
+<div class="flex items-baseline gap-1 text-slate-900 dark:text-white mb-4">
+<span class="text-3xl font-black tracking-tight">R150</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">avg. price</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">schedule</span>
+<span>~45 Mins Travel Time</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">repeat</span>
+<span>Departures every 15 mins</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">star</span>
+<span>Rated 4.8/5 (2.3k reviews)</span>
+</div>
+</div>
+</div>
+<a class="mt-auto flex w-full items-center justify-center rounded-lg bg-slate-100 py-2.5 text-sm font-bold text-slate-900 transition-colors hover:bg-primary group-hover:bg-primary dark:bg-slate-700 dark:text-white dark:hover:text-slate-900" href="#">
+                                        View Schedule
+                                    </a>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 transition-all hover:shadow-lg hover:border-primary/50 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-primary/50">
+<div class="mb-4">
+<div class="flex items-center justify-between mb-2">
+<span class="rounded-md bg-blue-100 px-2.5 py-1 text-xs font-bold text-blue-700 ring-1 ring-inset ring-blue-700/10 dark:bg-blue-900/30 dark:text-blue-300">Business</span>
+<button class="text-slate-400 hover:text-red-500 transition-colors"><span class="material-symbols-outlined text-[20px]">favorite</span></button>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">CPT Airport ➝ CBD</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Express Shuttle</p>
+<div class="flex items-baseline gap-1 text-slate-900 dark:text-white mb-4">
+<span class="text-3xl font-black tracking-tight">R220</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">avg. price</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">schedule</span>
+<span>~25 Mins Travel Time</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">bolt</span>
+<span>High Demand Route</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span>Verified Drivers Only</span>
+</div>
+</div>
+</div>
+<a class="mt-auto flex w-full items-center justify-center rounded-lg bg-slate-100 py-2.5 text-sm font-bold text-slate-900 transition-colors hover:bg-primary group-hover:bg-primary dark:bg-slate-700 dark:text-white dark:hover:text-slate-900" href="#">
+                                        View Schedule
+                                    </a>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 transition-all hover:shadow-lg hover:border-primary/50 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-primary/50">
+<div class="mb-4">
+<div class="flex items-center justify-between mb-2">
+<span class="rounded-md bg-green-100 px-2.5 py-1 text-xs font-bold text-green-700 ring-1 ring-inset ring-green-700/10 dark:bg-green-900/30 dark:text-green-300">Leisure</span>
+<button class="text-slate-400 hover:text-red-500 transition-colors"><span class="material-symbols-outlined text-[20px]">favorite</span></button>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Paarl ➝ Franschhoek</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Scenic Route</p>
+<div class="flex items-baseline gap-1 text-slate-900 dark:text-white mb-4">
+<span class="text-3xl font-black tracking-tight">R95</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">avg. price</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">schedule</span>
+<span>~30 Mins Travel Time</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">photo_camera</span>
+<span>Scenic Stops Available</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">wb_sunny</span>
+<span>Best for Morning/Evening</span>
+</div>
+</div>
+</div>
+<a class="mt-auto flex w-full items-center justify-center rounded-lg bg-slate-100 py-2.5 text-sm font-bold text-slate-900 transition-colors hover:bg-primary group-hover:bg-primary dark:bg-slate-700 dark:text-white dark:hover:text-slate-900" href="#">
+                                        View Schedule
+                                    </a>
+</div>
+<!-- Card 4 -->
+<div class="group relative flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 transition-all hover:shadow-lg hover:border-primary/50 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-primary/50">
+<div class="mb-4">
+<div class="flex items-center justify-between mb-2">
+<span class="rounded-md bg-purple-100 px-2.5 py-1 text-xs font-bold text-purple-700 ring-1 ring-inset ring-purple-700/10 dark:bg-purple-900/30 dark:text-purple-300">Commute</span>
+<button class="text-slate-400 hover:text-red-500 transition-colors"><span class="material-symbols-outlined text-[20px]">favorite</span></button>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Bellville ➝ Cape Town</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Peak Hour Express</p>
+<div class="flex items-baseline gap-1 text-slate-900 dark:text-white mb-4">
+<span class="text-3xl font-black tracking-tight">R45</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">avg. price</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">schedule</span>
+<span>~35 Mins Travel Time</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">group</span>
+<span>Carpool Options</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">savings</span>
+<span>Most Economical</span>
+</div>
+</div>
+</div>
+<a class="mt-auto flex w-full items-center justify-center rounded-lg bg-slate-100 py-2.5 text-sm font-bold text-slate-900 transition-colors hover:bg-primary group-hover:bg-primary dark:bg-slate-700 dark:text-white dark:hover:text-slate-900" href="#">
+                                        View Schedule
+                                    </a>
+</div>
+</div>
+</div>
+<!-- Section: Gauteng -->
+<div>
+<div class="flex items-center justify-between mb-5 mt-4">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Trending in Gauteng</h2>
+<a class="text-primary text-sm font-bold hover:underline" href="#">View All (56)</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Card 5 -->
+<div class="group relative flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 transition-all hover:shadow-lg hover:border-primary/50 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-primary/50">
+<div class="mb-4">
+<div class="flex items-center justify-between mb-2">
+<span class="rounded-md bg-orange-100 px-2.5 py-1 text-xs font-bold text-orange-700 ring-1 ring-inset ring-orange-700/10 dark:bg-orange-900/30 dark:text-orange-300">High Volume</span>
+<button class="text-slate-400 hover:text-red-500 transition-colors"><span class="material-symbols-outlined text-[20px]">favorite</span></button>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Sandton ➝ O.R. Tambo</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Gautrain Link / Shuttle</p>
+<div class="flex items-baseline gap-1 text-slate-900 dark:text-white mb-4">
+<span class="text-3xl font-black tracking-tight">R180</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">avg. price</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">schedule</span>
+<span>~20 Mins Travel Time</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">luggage</span>
+<span>Ample Luggage Space</span>
+</div>
+</div>
+</div>
+<a class="mt-auto flex w-full items-center justify-center rounded-lg bg-slate-100 py-2.5 text-sm font-bold text-slate-900 transition-colors hover:bg-primary group-hover:bg-primary dark:bg-slate-700 dark:text-white dark:hover:text-slate-900" href="#">
+                                        View Schedule
+                                    </a>
+</div>
+<!-- Card 6 -->
+<div class="group relative flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 transition-all hover:shadow-lg hover:border-primary/50 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-primary/50">
+<div class="mb-4">
+<div class="flex items-center justify-between mb-2">
+<span class="rounded-md bg-primary/10 px-2.5 py-1 text-xs font-bold text-primary ring-1 ring-inset ring-primary/20">Popular</span>
+<button class="text-slate-400 hover:text-red-500 transition-colors"><span class="material-symbols-outlined text-[20px]">favorite</span></button>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Pretoria ➝ Johannesburg</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">N1 Commuter Route</p>
+<div class="flex items-baseline gap-1 text-slate-900 dark:text-white mb-4">
+<span class="text-3xl font-black tracking-tight">R85</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">avg. price</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">schedule</span>
+<span>~55 Mins Travel Time</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-[18px]">wifi</span>
+<span>Wi-Fi on Selected Rides</span>
+</div>
+</div>
+</div>
+<a class="mt-auto flex w-full items-center justify-center rounded-lg bg-slate-100 py-2.5 text-sm font-bold text-slate-900 transition-colors hover:bg-primary group-hover:bg-primary dark:bg-slate-700 dark:text-white dark:hover:text-slate-900" href="#">
+                                        View Schedule
+                                    </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar: Suggested & Maps -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- Map Widget -->
+<div class="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-800 shadow-sm">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Route Coverage Map</h3>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-700 group cursor-pointer">
+<img alt="Abstract map representation" class="w-full h-full object-cover transition-transform group-hover:scale-105 opacity-80" data-alt="Digital map interface showing connected nodes" data-location="South Africa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLcGHf2Tb-DsbFzFRMygqFcHhovuE4pmx_zbYwkJwXnz011eAww0KmH-efZCw-LiJ8Ewewfdj6Yd29Dd7fa6law0PLETuCHpd5mk9rlbnP-sHGBVJljNbs3tRwQ81UQVJHM2HghufZbZawE3eP0Y1ApldfpEzdwwl-wLRpzqcaa66t3MwVCBl93EBjTbSnGxKXcn0Z9Njuo4QtCdfMBrOiM3-Us1wOTMgT2lLwAq8zg5giDPTiyDYOC5s3EwU_XcJxjFRoIcCVO-Y"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
+<button class="bg-white text-slate-900 px-4 py-2 rounded-lg font-bold text-sm shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">map</span>
+                                        Interactive Map
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Suggested Routes List -->
+<div class="rounded-xl bg-slate-50 border border-slate-200 p-6 dark:bg-slate-800/50 dark:border-slate-700">
+<h3 class="flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white mb-4">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+                                Suggested for You
+                            </h3>
+<ul class="space-y-4">
+<li class="pb-4 border-b border-slate-200 dark:border-slate-700 last:border-0 last:pb-0">
+<a class="group block" href="#">
+<div class="flex justify-between items-start mb-1">
+<span class="font-bold text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">Durban ➝ Umhlanga</span>
+<span class="text-xs font-semibold bg-green-100 text-green-700 px-2 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">Fast</span>
+</div>
+<div class="flex justify-between text-sm text-slate-500">
+<span>~20 mins</span>
+<span class="font-medium text-slate-900 dark:text-white">R60</span>
+</div>
+</a>
+</li>
+<li class="pb-4 border-b border-slate-200 dark:border-slate-700 last:border-0 last:pb-0">
+<a class="group block" href="#">
+<div class="flex justify-between items-start mb-1">
+<span class="font-bold text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">George ➝ Knysna</span>
+<span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">Scenic</span>
+</div>
+<div class="flex justify-between text-sm text-slate-500">
+<span>~50 mins</span>
+<span class="font-medium text-slate-900 dark:text-white">R110</span>
+</div>
+</a>
+</li>
+<li class="pb-4 border-b border-slate-200 dark:border-slate-700 last:border-0 last:pb-0">
+<a class="group block" href="#">
+<div class="flex justify-between items-start mb-1">
+<span class="font-bold text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">Soweto ➝ JHB CBD</span>
+<span class="text-xs font-semibold bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full dark:bg-orange-900 dark:text-orange-300">Popular</span>
+</div>
+<div class="flex justify-between text-sm text-slate-500">
+<span>~30 mins</span>
+<span class="font-medium text-slate-900 dark:text-white">R35</span>
+</div>
+</a>
+</li>
+</ul>
+<button class="mt-6 w-full rounded-lg border border-slate-300 bg-white py-2 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600">
+                                See More Suggestions
+                            </button>
+</div>
+<!-- Newsletter/Ad -->
+<div class="rounded-xl bg-gradient-to-br from-slate-900 to-slate-800 p-6 text-white relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-lg font-bold mb-2">Drive with UrbanSmart</h3>
+<p class="text-sm text-slate-300 mb-4">Earn money on your own schedule. Sign up to become a driver today.</p>
+<button class="bg-primary hover:bg-cyan-400 text-slate-900 text-sm font-bold px-4 py-2 rounded-lg transition-colors">
+                                    Become a Driver
+                                </button>
+</div>
+<div class="absolute -right-4 -bottom-4 text-slate-700 opacity-20">
+<span class="material-symbols-outlined text-[120px]">steering_wheel_heat</span>
+</div>
+</div>
+</aside>
+</div>
+<!-- SEO Content Block -->
+<section class="mt-16 border-t border-slate-200 dark:border-slate-800 pt-12 pb-8">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Comprehensive Directory of South African Commuter Routes</h2>
+<div class="prose prose-slate dark:prose-invert max-w-none text-sm text-slate-600 dark:text-slate-400 columns-1 md:columns-2 gap-8">
+<p class="mb-4">
+                                UrbanSmart-34 is your premier digital directory for ridesharing and commuter transport across South Africa. Whether you are navigating the bustling streets of Johannesburg, commuting from the Cape Flats to Cape Town CBD, or traveling along the scenic Garden Route, our platform connects you with verified drivers and reliable schedules. We aggregate data from thousands of daily trips to provide accurate pricing estimates and travel times.
+                            </p>
+<p class="mb-4">
+                                Our popular routes directory is updated in real-time to reflect seasonal changes, traffic patterns, and user demand. From student shuttles between Stellenbosch and Paarl to business class executive rides from Sandton to O.R. Tambo International Airport, UrbanSmart-34 ensures you have the information you need to book your ride with confidence. Explore our regional listings for Western Cape, Gauteng, KwaZulu-Natal, and the Eastern Cape to find the most efficient way to your destination.
+                            </p>
+</div>
+<div class="mt-8 flex flex-wrap gap-2">
+<span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-400">Cape Town Rideshare</span>
+<span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-400">Johannesburg Taxi Routes</span>
+<span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-400">Durban Commuter Info</span>
+<span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-400">Airport Shuttles SA</span>
+<span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-400">Long Distance Taxis</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 py-10 px-4 md:px-10 border-t border-slate-800">
+<div class="layout-content-container mx-auto max-w-[960px] flex flex-col md:flex-row justify-between gap-10">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">TRAVEL <span class="text-primary">by UrbanSmart-34</span></h2>
+</div>
+<p class="text-slate-400 text-sm max-w-xs">Connecting commuters with reliable rides across South Africa. Safe, transparent, and efficient.</p>
+<div class="flex gap-4 mt-2">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">rss_feed</span></a>
+</div>
+</div>
+<div class="flex flex-wrap gap-10 md:gap-20">
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-bold text-sm uppercase tracking-wider">Company</h4>
+<a class="text-slate-400 hover:text-white text-sm" href="#">About Us</a>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Careers</a>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Press</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-bold text-sm uppercase tracking-wider">Support</h4>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Help Center</a>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Safety</a>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-bold text-sm uppercase tracking-wider">Drivers</h4>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Sign Up to Drive</a>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Driver Requirements</a>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Earnings</a>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-6 border-t border-slate-800 text-center md:text-left layout-content-container mx-auto max-w-[960px]">
+<p class="text-slate-500 text-xs">© 2023 UrbanSmart-34. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

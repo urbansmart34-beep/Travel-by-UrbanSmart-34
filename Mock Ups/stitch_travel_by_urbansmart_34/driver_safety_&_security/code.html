@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Driver Safety &amp; Security - UrbanSmart-34</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13daec",
+                        "primary-dark": "#0ea5b3",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                        "brand-teal": "#13daec",
+                        "brand-blue": "#2563eb",
+                    },
+                    backgroundImage: {
+                        "brand-gradient": "linear-gradient(135deg, #13daec 0%, #2563eb 100%)",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#dbe5e6] dark:border-slate-800 bg-white dark:bg-[#15282a] px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="size-8 text-transparent bg-clip-text bg-brand-gradient">
+<svg class="text-brand-blue" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="logo-gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#13daec;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"></stop>
+</linearGradient>
+</defs>
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="url(#logo-gradient)"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-none tracking-[-0.015em]">TRAVEL</h2>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400 leading-none tracking-wide">by UrbanSmart-34</span>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-8 hidden md:flex">
+<div class="flex items-center gap-9">
+<a class="text-slate-900 dark:text-slate-100 text-sm font-medium leading-normal hover:text-brand-blue transition-colors" href="#">Home</a>
+<a class="text-slate-900 dark:text-slate-100 text-sm font-medium leading-normal hover:text-brand-blue transition-colors" href="#">Drive</a>
+<a class="text-slate-900 dark:text-slate-100 text-sm font-bold leading-normal text-transparent bg-clip-text bg-brand-gradient" href="#">Safety</a>
+<a class="text-slate-900 dark:text-slate-100 text-sm font-medium leading-normal hover:text-brand-blue transition-colors" href="#">Support</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-brand-gradient hover:opacity-90 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-opacity shadow-sm shadow-blue-500/30">
+<span class="truncate flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">sos</span>
+                        Emergency SOS
+                    </span>
+</button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">menu</span>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-5 px-4 md:px-40">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="@container">
+<div class="flex flex-col gap-6 py-10 @[480px]:gap-8 @[864px]:flex-row items-center">
+<div class="w-full aspect-video bg-cover bg-center rounded-xl shadow-md overflow-hidden relative @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-1/2" data-alt="Safe driver smiling in car interior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3vdc3eB39yPiu16itTDURmSpkopulGAcl71Fhwi-ddCiRbt6ExlyrD3nlsLrc9vQgi_RB6GQgFXj3MnIZMWS6B79k6I4wcfVNXQ1RccH88Th_dT7CVkpAY93P_SB04sH0UKTSdhkXQnmQjN5yDnxBm05hs-85mE6dyk-x8HmiQwcf71rmNt1AlM-zbt4xGwyg8e0fUomYIf2-QCDJhqVU-HgdVDiz6zBUZ2V2EFwcwtoIE_QM2QUIet-5LZR5_GOhGgR3_Yiar6E");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+<div class="flex gap-2">
+<div class="bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1 text-xs font-bold text-slate-800 dark:text-slate-200">
+<span class="material-symbols-outlined text-[16px] text-brand-blue">verified_user</span>
+                                        Verified Driver
+                                    </div>
+<div class="bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1 text-xs font-bold text-slate-800 dark:text-slate-200">
+<span class="material-symbols-outlined text-[16px] text-green-500">health_and_safety</span>
+                                        Safety Certified
+                                    </div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center @[864px]:w-1/2">
+<div class="flex flex-col gap-2 text-left">
+<h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl">
+                                    Safety First Design
+                                </h1>
+<h2 class="text-slate-600 dark:text-slate-300 text-sm font-normal leading-relaxed @[480px]:text-lg">
+                                    Your safety is our engine. Driving with UrbanSmart-34 means you are never alone on South African roads. We combine advanced technology with 24/7 support.
+                                </h2>
+</div>
+<div class="flex gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 @[480px]:h-12 bg-brand-gradient hover:opacity-90 text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base transition-all shadow-lg shadow-blue-500/20">
+<span class="truncate">Learn More</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 @[480px]:h-12 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base transition-colors">
+<span class="truncate">View Guidelines</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-10 py-10 @container border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col gap-4">
+<h2 class="text-slate-900 dark:text-white tracking-tight text-[28px] font-bold leading-tight @[480px]:text-3xl max-w-[720px]">
+                            Passenger Verification Standards
+                        </h2>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal max-w-[720px]">
+                            Every passenger goes through a rigorous multi-step verification process before they can book a ride, ensuring you know exactly who is getting in your vehicle.
+                        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+<div class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2c2e] p-6 flex-col shadow-sm hover:shadow-md transition-shadow group">
+<div class="text-brand-blue bg-blue-50 dark:bg-blue-900/20 w-12 h-12 rounded-full flex items-center justify-center group-hover:bg-brand-gradient group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[28px]">badge</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">ID Verification</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed">Government-issued ID checks linked to Home Affairs database for all riders.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2c2e] p-6 flex-col shadow-sm hover:shadow-md transition-shadow group">
+<div class="text-brand-blue bg-blue-50 dark:bg-blue-900/20 w-12 h-12 rounded-full flex items-center justify-center group-hover:bg-brand-gradient group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[28px]">face</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Facial Recognition</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed">Real-time selfie matching to ensure the account holder is the passenger.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2c2e] p-6 flex-col shadow-sm hover:shadow-md transition-shadow group">
+<div class="text-brand-blue bg-blue-50 dark:bg-blue-900/20 w-12 h-12 rounded-full flex items-center justify-center group-hover:bg-brand-gradient group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[28px]">payments</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Secure Payment</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed">Verified digital payment methods reduce cash handling risks.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-10 py-10 @container border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row gap-10">
+<div class="flex flex-col gap-6 flex-1">
+<div class="flex flex-col gap-4">
+<h2 class="text-slate-900 dark:text-white tracking-tight text-[28px] font-bold leading-tight @[480px]:text-3xl">
+                                    Real-Time Trip Monitoring
+                                </h2>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed">
+                                    Our dedicated safety team monitors trips 24/7 for anomalies. We track route deviations, unexpected long stops, and traffic patterns in major SA metros.
+                                </p>
+</div>
+<ul class="flex flex-col gap-4 mt-2">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-brand-blue mt-1">share_location</span>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold text-sm">Live Location Sharing</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Share your live location with trusted contacts instantly.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-brand-blue mt-1">alt_route</span>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold text-sm">Route Deviation Alerts</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Automatic alerts sent to HQ if you go significantly off-route.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-brand-blue mt-1">phonelink_ring</span>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold text-sm">Anonymized Calling</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Phone numbers are masked to protect your privacy.</p>
+</div>
+</li>
+</ul>
+<button class="mt-4 flex min-w-[84px] max-w-[240px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold leading-normal tracking-[0.015em] transition-colors w-fit">
+<span class="truncate">View Live Map Demo</span>
+</button>
+</div>
+<div class="flex-1 rounded-xl overflow-hidden relative shadow-lg h-[400px] bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 group">
+<div class="w-full h-full bg-cover bg-center opacity-80 dark:opacity-60 transition-opacity group-hover:opacity-100" data-alt="Abstract map view of city streets at night" data-location="Johannesburg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCWqUiGJ2mlxithvZ46SHrL-2drbSaV_siOw1UpwRKFttHDYL6IKjHAiTOKSrpVkMXySMXpT45fyy5GcmW9u-yU8-4Xh1-6YAM5cD3LxOG4CPJ5ONv1XkD7qYRgyHzBOnp9yoIgklMJRk06r-lZb-4kLs9tCg0QGgGlWrP4X5QFzThpQbD5XQV67yhUkkF0Zpz_8MWyOXmfN9sw9X2FySOuGph_Yh4s2wlecSPYzZT6hykLbakswQm9SL1-xvz9QFnbg_m5ky3SXbw");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4 bg-white dark:bg-[#1a2c2e] p-2 rounded-lg shadow-md border border-slate-200 dark:border-slate-700">
+<span class="flex items-center gap-2 text-xs font-bold text-green-600 dark:text-green-400">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+</span>
+                                    Monitoring Active
+                                </span>
+</div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="bg-white dark:bg-[#1a2c2e] p-4 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 flex items-center gap-4">
+<div class="bg-brand-gradient p-2 rounded-full text-white">
+<span class="material-symbols-outlined">security</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold">Status</p>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Secure Route • ETA 12 min</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="py-10 border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row gap-12">
+<div class="md:w-1/3">
+<h2 class="text-slate-900 dark:text-white text-[28px] font-bold leading-tight tracking-tight mb-4">
+                                Emergency Contact Setup Guide
+                            </h2>
+<p class="text-slate-600 dark:text-slate-400 text-base mb-6">
+                                Prepare for the unexpected. Set up your trusted contacts now so help is just one tap away.
+                            </p>
+<div class="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-brand-blue">info</span>
+<p class="text-sm text-slate-700 dark:text-slate-300">
+                                        Your trusted contacts will receive a live link to your trip if you activate SOS.
+                                    </p>
+</div>
+</div>
+</div>
+<div class="md:w-2/3">
+<div class="flex flex-col gap-4">
+<div class="flex gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2c2e] shadow-sm relative overflow-hidden">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold flex items-center justify-center text-sm z-10">1</div>
+<div class="flex flex-col gap-2 z-10">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Open App Settings</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Navigate to the 'Safety' tab in your driver app profile.</p>
+</div>
+</div>
+<div class="flex gap-4 p-5 rounded-xl border border-brand-blue/30 dark:border-brand-blue/30 bg-blue-50/50 dark:bg-blue-900/10 shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[100px] text-brand-blue">contact_emergency</span>
+</div>
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-gradient text-white font-bold flex items-center justify-center text-sm z-10">2</div>
+<div class="flex flex-col gap-2 z-10 max-w-[80%]">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Add Trusted Contacts</h3>
+<p class="text-slate-600 dark:text-slate-300 text-sm">Select up to 5 contacts from your phone book. They don't need the app to receive alerts.</p>
+<button class="mt-2 text-brand-blue font-bold text-sm flex items-center hover:underline w-fit">
+                                            Add Contacts Now <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1a2c2e] shadow-sm relative overflow-hidden">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 font-bold flex items-center justify-center text-sm z-10">3</div>
+<div class="flex flex-col gap-2 z-10">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Enable Voice SOS</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Set up a voice phrase to trigger emergency protocols hands-free.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center gap-6 py-10 mt-10 border-t border-slate-200 dark:border-slate-800">
+<p class="text-sm font-medium text-slate-400 uppercase tracking-widest">Secured by Industry Leaders</p>
+<div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-300">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl">local_police</span>
+<span class="font-bold text-xl text-slate-700 dark:text-slate-300">SAPS Partner</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl">gpp_good</span>
+<span class="font-bold text-xl text-slate-700 dark:text-slate-300">CyberTrust</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl">lock</span>
+<span class="font-bold text-xl text-slate-700 dark:text-slate-300">256-Bit SSL</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

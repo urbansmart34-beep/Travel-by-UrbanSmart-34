@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dispute Resolution Detail - UrbanSmart-34</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d9488", 
+                        "primary-dark": "#0f766e",
+                        "primary-light": "#ccfbf1",
+                        "brand-teal": "#14b8a6",
+                        "brand-blue": "#0ea5e9",
+                        "background-light": "#f0fdfa",
+                        "background-dark": "#042f2e",
+                        "surface-white": "#ffffff",
+                        "text-main": "#0f172a",
+                        "text-sub": "#475569",
+                        "border-color": "#e2e8f0"
+                    },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(135deg, #14b8a6 0%, #0ea5e9 100%)',
+                        'brand-gradient-hover': 'linear-gradient(135deg, #0d9488 0%, #0284c7 100%)',
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main min-h-screen flex flex-col">
+<header class="bg-surface-white border-b border-border-color sticky top-0 z-50">
+<div class="px-6 lg:px-10 py-3 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-text-main">
+<div class="size-8 text-transparent bg-clip-text bg-brand-gradient">
+<span class="material-symbols-outlined !text-[32px]">local_taxi</span>
+</div>
+<h2 class="text-text-main text-lg font-bold leading-tight tracking-[-0.015em]">
+                    TRAVEL by <span class="text-transparent bg-clip-text bg-brand-gradient">UrbanSmart-34</span>
+</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-slate-50 border border-border-color focus-within:border-brand-teal focus-within:ring-1 focus-within:ring-brand-teal transition-all">
+<div class="text-text-sub flex border-none items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-main focus:outline-0 focus:ring-0 border-none bg-transparent focus:border-none h-full placeholder:text-text-sub px-4 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal" placeholder="Search disputes, users..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex items-center gap-8">
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-text-sub hover:text-brand-teal transition-colors text-sm font-medium leading-normal" href="#">Dashboard</a>
+<a class="text-text-sub hover:text-brand-teal transition-colors text-sm font-medium leading-normal" href="#">Users</a>
+<a class="text-brand-teal font-bold text-sm leading-normal border-b-2 border-brand-teal pb-0.5" href="#">Disputes</a>
+<a class="text-text-sub hover:text-brand-teal transition-colors text-sm font-medium leading-normal" href="#">Settings</a>
+</nav>
+<div class="flex items-center gap-3 pl-4 border-l border-border-color">
+<button class="bg-slate-50 p-2 rounded-full text-text-sub hover:bg-primary-light hover:text-brand-teal transition-colors relative">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border border-white"></span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 ring-2 ring-brand-teal/20" data-alt="Admin User Profile Picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWimx4zPqWHIyYs2e9f04HttZN77EwN8mDnVrXCK7QR1SBISyG1fB__YBduan8NTsE5FcY5cDDqmx5tZFyaZbghXOgzYqscX09ldDYcB6-4Hl7xh0SkK95YmehcSTNtd8bw7L_KajKY8fAaYmGWTzktLsbhj9K5BwQ2enkI-g4jLezwRhKyf9r-eMAeqbvRLvNOu2Ldivuy4I0FCfoNW1vo8DiOwchIEhuz5p-FJ4Kzp7csVqWZ7Ef0hRtEVVcb0rZfOrzGRi-UyM");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex justify-center py-8 px-4 lg:px-8 bg-slate-50/50">
+<div class="max-w-[1400px] w-full flex flex-col lg:flex-row gap-6">
+<div class="flex-1 flex flex-col gap-6 min-w-0">
+<div class="flex flex-col gap-4">
+<div class="flex flex-wrap items-center gap-2 text-sm">
+<a class="text-text-sub hover:text-brand-teal font-medium" href="#">Disputes</a>
+<span class="material-symbols-outlined text-text-sub text-[16px]">chevron_right</span>
+<span class="text-text-main font-semibold">Case #DS-9982</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col gap-1">
+<h1 class="text-3xl font-bold tracking-tight text-text-main">Non-arrival Complaint</h1>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-700 ring-1 ring-inset ring-amber-600/20">
+<span class="size-1.5 rounded-full bg-amber-600"></span>
+                                Under Review
+                            </span>
+<span class="text-text-sub text-sm">Created 2 hours ago</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-border-color bg-surface-white text-text-main text-sm font-semibold hover:bg-slate-50 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-text-sub">gavel</span>
+                            View Policy
+                        </button>
+<button class="flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-border-color bg-surface-white text-text-main text-sm font-semibold hover:bg-slate-50 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-text-sub">download</span>
+                            Export Log
+                        </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-white rounded-xl shadow-sm border border-border-color overflow-hidden">
+<div class="p-6">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<div class="size-8 rounded-full bg-brand-gradient flex items-center justify-center text-white shadow-md">
+<span class="material-symbols-outlined text-[18px]">info</span>
+</div>
+                        Dispute Summary
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="p-4 rounded-lg bg-slate-50 border border-border-color relative group hover:border-brand-teal/30 transition-colors">
+<div class="absolute top-4 right-4 text-xs font-bold text-text-sub uppercase tracking-wider bg-white px-2 py-1 rounded border border-border-color">Driver</div>
+<div class="flex items-start gap-4">
+<div class="size-12 rounded-full bg-cover bg-center border-2 border-surface-white shadow-md ring-1 ring-black/5" data-alt="Driver Portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDWZ4LOTtUx10Cfg9m6q7Figid3QVvjCZ6e_7ODlbyMPAJTS6MxeOrqeYE8T5OYToJOhpIjbGKRSqHUTws22JLAXUzUrDbk0A45OpmKS65CUeB8rCs-EyPIH8H2ui3p4BPjutBmVaVaaIQLZ8i6sRAZMW_QHIqo5PQI5ArYnHW3wH8O1Elxjf-QJ1vRw93XyWPVQlE3Uyv0avfBBpSmrCMjcJ_tpWF3U-Aw_RwvjEPsP1VDBGTklkcuO3dafq0OCHVpAyM9KSRBNFI");'></div>
+<div>
+<p class="font-bold text-text-main text-lg">John Doe</p>
+<div class="flex items-center gap-1 text-sm text-text-sub mt-1">
+<span class="material-symbols-outlined text-amber-400 text-[16px] fill-1">star</span>
+<span class="font-bold text-text-main">4.8</span>
+<span>(124 trips)</span>
+</div>
+<p class="text-xs text-text-sub mt-2 font-medium">Honda Civic • AB-123-CD</p>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-slate-50 border border-border-color relative group hover:border-brand-teal/30 transition-colors">
+<div class="absolute top-4 right-4 text-xs font-bold text-text-sub uppercase tracking-wider bg-white px-2 py-1 rounded border border-border-color">Commuter</div>
+<div class="flex items-start gap-4">
+<div class="size-12 rounded-full bg-cover bg-center border-2 border-surface-white shadow-md ring-1 ring-black/5" data-alt="Commuter Portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBS8FHPRWjmyZhTsCJKwLAtZdUNiX857O-sIKMwIMlklJnxdAfMetxAakYsEefE10qOCusAxVdHVwlFrzvHQfoPrDkXsP8MqVrb4cwKPL6dw9BFqif7IYll_H53gAz0snG30-B9MDMs4WNahkNUAETPD94khZ7UMmn3djUF6ZE73y84QwnW1TSQ78t5rk-CvFlbZxUjwfB7tISbgi63goudpmTLBvdJPl0EwDIXf8t3mCRAR2h9Xqxeq1SgAn9y6r0fVaa1_UNbLxc");'></div>
+<div>
+<p class="font-bold text-text-main text-lg">Sarah Smith</p>
+<div class="flex items-center gap-1 text-sm text-text-sub mt-1">
+<span class="material-symbols-outlined text-amber-400 text-[16px] fill-1">star</span>
+<span class="font-bold text-text-main">4.9</span>
+<span>(42 trips)</span>
+</div>
+<p class="text-xs text-text-sub mt-2 font-medium text-brand-teal">Membership: Premium</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-6 pt-6 border-t border-border-color">
+<div class="flex-1 space-y-4">
+<div>
+<p class="text-xs font-bold text-text-sub uppercase tracking-wider mb-1">Trip ID</p>
+<p class="text-sm font-bold text-brand-blue font-mono">#TR-8821</p>
+</div>
+<div>
+<p class="text-xs font-bold text-text-sub uppercase tracking-wider mb-1">Dispute Reason</p>
+<p class="text-sm font-medium text-text-main bg-red-50 text-red-700 px-3 py-2 rounded-md border border-red-100 inline-block">"Driver didn't show up at the pickup point, waited 20 mins."</p>
+</div>
+<div>
+<p class="text-xs font-bold text-text-sub uppercase tracking-wider mb-1">Trip Cost</p>
+<p class="text-sm font-bold text-text-main">$45.50 <span class="text-xs font-normal text-text-sub ml-1">(Held in Escrow)</span></p>
+</div>
+</div>
+<div class="md:w-1/3">
+<div class="w-full aspect-video rounded-lg bg-cover bg-center shadow-md relative overflow-hidden group" data-alt="Map view showing route from point A to point B" data-location="San Francisco Map" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYcPMNFcsEtalRlXDBU8nR4EUEzQjP9fY029Sy0pvnXqYlL_yThJAmW-Xdhvvob4n-q3wYcra3iO0hxr9-m5PtCS0SiGFO77_rbKHvOHrukXXu5PhbNIxIqxdN7l_DxN6u-AjvcdusygkOJ2QZGyz003MQXnZcx9J0JbwQyn_ggO5eWno68ZDHvrYvx8r-d7Eh823fioffAQdMM_Lycds2NOXlfIcieSDHKqiyRd-zB0_2F2xNEX0t29sTY7SWDEmcrcRfIGYhmuc");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+<div class="absolute bottom-3 left-3">
+<span class="bg-surface-white/95 backdrop-blur-sm px-3 py-1.5 rounded-md text-xs font-bold shadow-sm text-text-main flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">map</span> Route Preview
+                                    </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-white rounded-xl shadow-sm border border-border-color p-6">
+<h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+<div class="size-8 rounded-full bg-brand-gradient flex items-center justify-center text-white shadow-md">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</div>
+                    Event Timeline
+                </h3>
+<div class="relative pl-4 space-y-8 before:absolute before:inset-y-0 before:left-[19px] before:w-0.5 before:bg-gradient-to-b before:from-brand-teal/20 before:to-brand-blue/20">
+<div class="relative pl-8">
+<div class="absolute left-0 top-1 size-10 bg-gradient-to-br from-brand-teal to-brand-blue rounded-full flex items-center justify-center border-4 border-surface-white shadow-sm text-white">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+<h4 class="text-sm font-bold text-text-main">Booking Confirmed</h4>
+<span class="text-xs text-text-sub font-mono bg-slate-100 px-2 py-0.5 rounded">14:00 PM</span>
+</div>
+<p class="text-sm text-text-sub mt-1">Trip scheduled from Downtown to Airport.</p>
+</div>
+<div class="relative pl-8">
+<div class="absolute left-0 top-1 size-10 bg-slate-100 rounded-full flex items-center justify-center border-4 border-surface-white shadow-sm">
+<span class="material-symbols-outlined text-text-sub text-[18px]">near_me</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+<h4 class="text-sm font-bold text-text-main">Driver Arrived at Zone</h4>
+<span class="text-xs text-text-sub font-mono bg-slate-100 px-2 py-0.5 rounded">14:15 PM</span>
+</div>
+<p class="text-sm text-text-sub mt-1">GPS coordinates match pickup zone radius.</p>
+</div>
+<div class="relative pl-8">
+<div class="absolute left-0 top-1 size-10 bg-primary-light rounded-full flex items-center justify-center border-4 border-surface-white shadow-sm">
+<span class="material-symbols-outlined text-brand-teal text-[18px]">chat</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-3">
+<h4 class="text-sm font-bold text-text-main">Chat Session Started</h4>
+<span class="text-xs text-text-sub font-mono bg-slate-100 px-2 py-0.5 rounded">14:18 PM - 14:25 PM</span>
+</div>
+<div class="bg-slate-50/80 rounded-lg p-4 space-y-3 border border-border-color max-w-2xl">
+<div class="flex items-start gap-3">
+<div class="size-8 rounded-full bg-cover bg-center shrink-0 ring-2 ring-white shadow-sm" data-alt="Commuter Avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQGJS2L0v9qaa0mkXm7T0hjvA3X1fj9OM_aGPApZ-UzloWu3x7dogmF4xtltZs1A6QpmkvqDU4rD805cxvu9r00NlDidABMWMHFwAZiO9SL2_foZBLvk5T0nN5ppGgfIPB7HxjtR5MNEsqVLCVoAUK4aEB7aBvh8JK5T6g93HWvtTYo8DXjiez513yeKUnzyLfYxRYybAjn2-3BWPMCN3EiIipivXiQjKDIUMJCA13oRJKQXYwW3xXps73yWp6ANXu-Xydye6AG3s");'></div>
+<div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-sm border border-border-color/50">
+<p class="text-text-main">I'm at the main entrance, where are you?</p>
+<span class="text-[10px] text-text-sub block mt-1">14:20 PM</span>
+</div>
+</div>
+<div class="flex items-start gap-3 flex-row-reverse">
+<div class="size-8 rounded-full bg-cover bg-center shrink-0 ring-2 ring-white shadow-sm" data-alt="Driver Avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgZn1Nk8QfRidTgUShLDXl3zz94x9F3mgfzAtZqOITfnuIhmBou_aoo0Lk5nzERlJQuJCU2IQ_vDuPUyXCEDimtKcdYgiRNH69M_cknt3WZKmj92rv8sWfdt55NgXmbImIoGD9fchQ9C5s9lZGqElQw07Jca5ikpIOl_s12XbEbnAK39yJM4Bgiuw6Gi2gwuEEen0gopXt5OxTirzWPUDzSQd9UPnineAmE8upc-QWI-Ezk7_xk1fKY4f-Pq0I6aBSmHknx0qhjIA");'></div>
+<div class="bg-primary-light p-3 rounded-2xl rounded-tr-none text-sm text-text-main border border-brand-teal/10 shadow-sm">
+<p>I'm waiting near the Starbucks sign. Hazard lights are on.</p>
+<span class="text-[10px] text-brand-teal/80 font-medium block mt-1">14:22 PM</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="size-8 rounded-full bg-cover bg-center shrink-0 ring-2 ring-white shadow-sm" data-alt="Commuter Avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBK6-yCoC504tWsuy-d3IxltrFwqg-tjbKbNhg62jh5ifZk0wM94W5W91XaLNt06W2agcZwrphVvKBHDxqA6H9qAoQD-kr4Wt_LNEY6heYeXmuERyYY-Kq9wPiWtEVYFatdsF6N5PKRe8schiyqd6SQvZnzJlG17BqMhtQS2MeZ-KaIhdey7aikjslIew1V4NPQXExlGRFlfTsRtkpHTz0ZO7Plmq8aYXtRqCgTR89wl8e7Tc7yj5xack7Dp_I9K7cIsufw2uUoPLI");'></div>
+<div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-sm border border-border-color/50">
+<p class="text-text-main">I don't see any Starbucks here. Are you at terminal 2?</p>
+<span class="text-[10px] text-text-sub block mt-1">14:24 PM</span>
+</div>
+</div>
+</div>
+</div>
+<div class="relative pl-8">
+<div class="absolute left-0 top-1 size-10 bg-red-50 rounded-full flex items-center justify-center border-4 border-surface-white shadow-sm">
+<span class="material-symbols-outlined text-red-500 text-[18px]">cancel</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+<h4 class="text-sm font-bold text-text-main">Booking Cancelled</h4>
+<span class="text-xs text-text-sub font-mono bg-slate-100 px-2 py-0.5 rounded">14:35 PM</span>
+</div>
+<p class="text-sm text-text-sub mt-1">Cancelled by Commuter. Reason: "Driver not found".</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="lg:w-[380px] shrink-0 flex flex-col gap-6">
+<div class="lg:sticky lg:top-24 space-y-6">
+<div class="bg-surface-white rounded-xl shadow-lg shadow-brand-blue/5 border border-border-color p-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-brand-gradient"></div>
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2 text-text-main">
+<span class="material-symbols-outlined text-brand-teal">verified_user</span>
+                        Admin Actions
+                    </h3>
+<div class="space-y-4">
+<div class="space-y-2">
+<label class="text-xs font-bold text-text-sub uppercase tracking-wider block">Resolution Note (Internal)</label>
+<textarea class="w-full rounded-lg border-border-color bg-slate-50 text-sm p-3 focus:ring-brand-teal focus:border-brand-teal resize-none h-24 placeholder:text-slate-400" placeholder="Enter justification for decision..."></textarea>
+</div>
+<hr class="border-border-color"/>
+<div class="space-y-3">
+<p class="text-xs font-bold text-text-sub uppercase tracking-wider mb-2">Financial Resolution</p>
+<button class="w-full flex items-center justify-between px-4 py-3 bg-brand-gradient hover:bg-brand-gradient-hover text-white rounded-lg shadow-md group transition-all duration-300">
+<span class="font-bold text-sm">Force Refund to Commuter</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">keyboard_return</span>
+</button>
+<button class="w-full flex items-center justify-between px-4 py-3 bg-white border-2 border-brand-teal/20 text-text-main rounded-lg hover:border-brand-teal hover:bg-brand-teal/5 transition-all group">
+<span class="font-bold text-sm text-brand-teal">Release Payment to Driver</span>
+<span class="material-symbols-outlined text-brand-teal group-hover:translate-x-1 transition-transform">payments</span>
+</button>
+<button class="w-full flex items-center justify-between px-4 py-3 bg-white border border-border-color text-text-main rounded-lg hover:bg-slate-50 transition-all group">
+<span class="font-bold text-sm text-slate-600">Partial Refund (50/50)</span>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-slate-600 transition-colors">pie_chart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-white rounded-xl shadow-sm border border-border-color p-6">
+<h3 class="text-lg font-bold mb-4 text-text-main">Communication</h3>
+<p class="text-sm text-text-sub mb-4">Send a formal resolution message to both parties via email and in-app notification.</p>
+<button class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-primary-light text-primary-dark border border-brand-teal/20 rounded-lg hover:bg-brand-teal/20 transition-all font-bold text-sm">
+<span class="material-symbols-outlined">mail</span>
+                        Message Both Parties
+                    </button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-white p-4 rounded-xl border border-border-color text-center shadow-sm">
+<p class="text-xs text-text-sub font-bold uppercase">Driver Disputes</p>
+<p class="text-2xl font-bold text-text-main mt-1">2</p>
+<p class="text-[10px] text-green-600 font-medium bg-green-50 rounded-full px-2 py-0.5 inline-block mt-1">Low Risk</p>
+</div>
+<div class="bg-surface-white p-4 rounded-xl border border-border-color text-center shadow-sm">
+<p class="text-xs text-text-sub font-bold uppercase">Commuter Disputes</p>
+<p class="text-2xl font-bold text-text-main mt-1">0</p>
+<p class="text-[10px] text-green-600 font-medium bg-green-50 rounded-full px-2 py-0.5 inline-block mt-1">Clean Record</p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+
+</body></html>

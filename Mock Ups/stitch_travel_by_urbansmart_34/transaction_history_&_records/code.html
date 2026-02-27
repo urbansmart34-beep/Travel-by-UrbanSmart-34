@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Transaction History - UrbanSmart-34</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0056b3",
+                        "primary-content": "#ffffff",
+                        "primary-dark": "#004494",
+                        "primary-light": "#e0f2fe",
+                        "brand-teal": "#00bfa5",
+                        "brand-blue": "#0056b3",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-slate-900 dark:text-slate-100">
+<header class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-3">
+<div class="h-12 flex items-center">
+<img alt="TRAVEL by UrbanSmart-34" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrOls4b1wX9scqUmiVX5JLCKAf8-5RBdB0wdK5jI3aoAppusZUOKgMtQaeoJ4oH55jeFthVnI2_5VEmRj3luWlXAQLLnYR062gBs0BlCecwoLcbTyA_OKRqj2KeqiUrVMowoiZ9D7YhiVHvcQWTufP-zC1JkwyK9_sa47Xv-7JXERqd6erUomGPLjCQ_JFpjeWorw0eUWwtXHDL6DZA624q46a4MQBDdIyDlY5qI0xOlGBIdbzJ8wydo_oZIOzqiUqJzh_FjqDgr0"/>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-600 hover:text-brand-blue dark:text-slate-300 dark:hover:text-brand-teal transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium text-slate-600 hover:text-brand-blue dark:text-slate-300 dark:hover:text-brand-teal transition-colors" href="#">Bookings</a>
+<a class="text-sm font-medium text-brand-blue dark:text-brand-teal transition-colors" href="#">Wallet</a>
+<a class="text-sm font-medium text-slate-600 hover:text-brand-blue dark:text-slate-300 dark:hover:text-brand-teal transition-colors" href="#">Profile</a>
+<a class="text-sm font-medium text-slate-600 hover:text-brand-blue dark:text-slate-300 dark:hover:text-brand-teal transition-colors" href="#">Settings</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center justify-center h-9 px-4 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-900 text-sm font-semibold transition-colors dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700">
+                    Log Out
+                </button>
+<div class="size-9 rounded-full bg-slate-200 bg-center bg-cover border border-slate-200 dark:border-slate-700" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhIsu2aVcJrcC_wUj9UJYvkGaP24rtV76Y7ngNfmnAA10UwZ9WvcoaSt9fd2DGLmQve1yUSsAzuBgUOOIjkYx6ra0UTorVZzYngVbXGp8r5xK2gIbjQor1Po_vO5rHjojvaqaVyZrcNf8TMSNsXYHWLFWqvsrUvhtMfohYnDbmxwkLdlxQOBxlPF5BqFFVcw4jlAwl9njUZIhXsYUGCQ_5F9oRy11HSNZRAQt1a5OZ4ElrrXebXZ3iTVchNnbuIHwuhPZ7UtXW4Bs");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<nav class="flex mb-6 text-sm font-medium text-slate-500 dark:text-slate-400">
+<a class="hover:text-brand-blue dark:hover:text-brand-teal transition-colors" href="#">Home</a>
+<span class="mx-2">/</span>
+<a class="hover:text-brand-blue dark:hover:text-brand-teal transition-colors" href="#">Wallet</a>
+<span class="mx-2">/</span>
+<span class="text-slate-900 dark:text-white">History</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div>
+<h2 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white mb-2">Transaction History &amp; Records</h2>
+<p class="text-slate-500 dark:text-slate-400 max-w-2xl">View and manage your payments, refunds, and payouts. Keep track of all financial activities associated with your account.</p>
+</div>
+<button class="flex items-center gap-2 h-10 px-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-brand-blue dark:hover:text-brand-teal transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]">download</span>
+            Export to CSV
+        </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+<div class="p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col gap-2 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-brand-blue"></div>
+<div class="flex items-center justify-between">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Current Balance</p>
+<div class="p-1.5 rounded-md bg-blue-50 text-brand-blue dark:bg-blue-900/30 dark:text-blue-300">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2">
+<p class="text-2xl font-bold text-slate-900 dark:text-white">$120.50</p>
+<span class="text-xs font-semibold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 px-1.5 py-0.5 rounded">+0%</span>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col gap-2 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-slate-300 dark:bg-slate-600"></div>
+<div class="flex items-center justify-between">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Total Spent (Oct)</p>
+<div class="p-1.5 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2">
+<p class="text-2xl font-bold text-slate-900 dark:text-white">$342.00</p>
+<span class="text-xs font-semibold text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 px-1.5 py-0.5 rounded">+12%</span>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col gap-2 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-brand-teal"></div>
+<div class="flex items-center justify-between">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Total Earned (Oct)</p>
+<div class="p-1.5 rounded-md bg-teal-50 text-brand-teal dark:bg-teal-900/30 dark:text-teal-300">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2">
+<p class="text-2xl font-bold text-slate-900 dark:text-white">$850.00</p>
+<span class="text-xs font-semibold text-red-600 bg-red-50 dark:bg-red-900/20 px-1.5 py-0.5 rounded">-5%</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm mb-6">
+<div class="flex flex-col lg:flex-row gap-4">
+<div class="flex-1 relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2.5 border border-slate-200 dark:border-slate-600 rounded-lg leading-5 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-brand-blue dark:focus:ring-brand-teal focus:border-brand-blue dark:focus:border-brand-teal sm:text-sm transition-shadow" placeholder="Search by Reference ID (e.g., Booking-123)" type="text"/>
+</div>
+<div class="flex flex-col sm:flex-row gap-3">
+<div class="relative min-w-[160px]">
+<button class="flex items-center justify-between w-full w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-lg text-sm text-slate-600 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-500 focus:outline-none focus:ring-1 focus:ring-brand-blue dark:focus:ring-brand-teal">
+<span>Last 30 Days</span>
+<span class="material-symbols-outlined text-[18px] text-slate-400">calendar_today</span>
+</button>
+</div>
+<div class="relative min-w-[140px]">
+<select class="appearance-none block w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-lg text-sm text-slate-600 dark:text-slate-300 focus:outline-none focus:ring-1 focus:ring-brand-blue dark:focus:ring-brand-teal focus:border-brand-blue dark:focus:border-brand-teal cursor-pointer">
+<option>All Types</option>
+<option>Trip Payment</option>
+<option>Driver Payout</option>
+<option>Wallet Top-Up</option>
+<option>Refund</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</div>
+</div>
+<div class="relative min-w-[140px]">
+<select class="appearance-none block w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-lg text-sm text-slate-600 dark:text-slate-300 focus:outline-none focus:ring-1 focus:ring-brand-blue dark:focus:ring-brand-teal focus:border-brand-blue dark:focus:border-brand-teal cursor-pointer">
+<option>All Status</option>
+<option>Completed</option>
+<option>Pending</option>
+<option>Failed</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</div>
+</div>
+<button class="bg-brand-blue hover:bg-primary-dark text-white font-medium py-2.5 px-4 rounded-lg text-sm transition-colors shadow-sm dark:bg-brand-teal dark:text-slate-900 dark:hover:bg-teal-400">
+                    Filter
+                </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="min-w-full divide-y divide-slate-200 dark:divide-slate-700">
+<thead class="bg-gradient-to-r from-slate-50 to-blue-50/30 dark:from-slate-900 dark:to-slate-800/50">
+<tr>
+<th class="px-6 py-4 text-left text-xs font-bold text-brand-blue dark:text-brand-teal uppercase tracking-wider" scope="col">Date</th>
+<th class="px-6 py-4 text-left text-xs font-bold text-brand-blue dark:text-brand-teal uppercase tracking-wider" scope="col">Type</th>
+<th class="px-6 py-4 text-left text-xs font-bold text-brand-blue dark:text-brand-teal uppercase tracking-wider" scope="col">Reference ID</th>
+<th class="px-6 py-4 text-left text-xs font-bold text-brand-blue dark:text-brand-teal uppercase tracking-wider" scope="col">Status</th>
+<th class="px-6 py-4 text-right text-xs font-bold text-brand-blue dark:text-brand-teal uppercase tracking-wider" scope="col">Amount</th>
+<th class="px-6 py-4 text-right text-xs font-bold text-brand-blue dark:text-brand-teal uppercase tracking-wider" scope="col"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-700 bg-white dark:bg-slate-800">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 dark:text-slate-200">
+<div class="font-medium">Oct 24, 2023</div>
+<div class="text-xs text-slate-500">10:42 AM</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center">
+<div class="flex-shrink-0 size-8 rounded-full bg-blue-50 dark:bg-blue-900/30 text-brand-blue dark:text-blue-400 flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-[18px]">directions_car</span>
+</div>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Trip Payment</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm">
+<a class="text-brand-blue hover:text-primary-dark font-medium font-mono dark:text-brand-teal" href="#">Booking-982</a>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-2.5 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400">
+                            Completed
+                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-bold text-red-600 dark:text-red-400">
+                        -$24.50
+                    </td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 dark:text-slate-200">
+<div class="font-medium">Oct 23, 2023</div>
+<div class="text-xs text-slate-500">03:15 PM</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center">
+<div class="flex-shrink-0 size-8 rounded-full bg-teal-50 dark:bg-teal-900/30 text-brand-teal dark:text-teal-400 flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+</div>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Wallet Top-Up</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm">
+<a class="text-brand-blue hover:text-primary-dark font-medium font-mono dark:text-brand-teal" href="#">Ref-8821</a>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-2.5 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400">
+                            Completed
+                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-bold text-emerald-600 dark:text-emerald-400">
+                        +$50.00
+                    </td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 dark:text-slate-200">
+<div class="font-medium">Oct 22, 2023</div>
+<div class="text-xs text-slate-500">09:00 AM</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center">
+<div class="flex-shrink-0 size-8 rounded-full bg-orange-50 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Driver Payout</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm">
+<a class="text-brand-blue hover:text-primary-dark font-medium font-mono dark:text-brand-teal" href="#">Pay-1102</a>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-2.5 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">
+                            Pending
+                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-bold text-emerald-600 dark:text-emerald-400">
+                        +$120.00
+                    </td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 dark:text-slate-200">
+<div class="font-medium">Oct 20, 2023</div>
+<div class="text-xs text-slate-500">01:45 PM</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center">
+<div class="flex-shrink-0 size-8 rounded-full bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</div>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Refund</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm">
+<a class="text-brand-blue hover:text-primary-dark font-medium font-mono dark:text-brand-teal" href="#">Booking-800</a>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-2.5 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400">
+                            Failed
+                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-bold text-slate-400">
+                        $0.00
+                    </td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 dark:text-slate-200">
+<div class="font-medium">Oct 19, 2023</div>
+<div class="text-xs text-slate-500">06:20 PM</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center">
+<div class="flex-shrink-0 size-8 rounded-full bg-blue-50 dark:bg-blue-900/30 text-brand-blue dark:text-blue-400 flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-[18px]">directions_car</span>
+</div>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Trip Payment</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm">
+<a class="text-brand-blue hover:text-primary-dark font-medium font-mono dark:text-brand-teal" href="#">Booking-755</a>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-2.5 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400">
+                            Completed
+                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-bold text-red-600 dark:text-red-400">
+                        -$18.00
+                    </td>
+<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bg-white dark:bg-slate-800 px-4 py-3 flex items-center justify-between border-t border-slate-200 dark:border-slate-700 sm:px-6">
+<div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+<div>
+<p class="text-sm text-slate-700 dark:text-slate-300">
+                        Showing
+                        <span class="font-medium">1</span>
+                        to
+                        <span class="font-medium">5</span>
+                        of
+                        <span class="font-medium">24</span>
+                        results
+                    </p>
+</div>
+<div>
+<nav aria-label="Pagination" class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
+<a class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-sm font-medium text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700" href="#">
+<span class="sr-only">Previous</span>
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</a>
+<a aria-current="page" class="z-10 bg-brand-blue/10 border-brand-blue text-brand-blue dark:border-brand-teal dark:text-brand-teal dark:bg-brand-teal/10 relative inline-flex items-center px-4 py-2 border text-sm font-medium" href="#">
+                            1
+                        </a>
+<a class="bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-600 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700 relative inline-flex items-center px-4 py-2 border text-sm font-medium" href="#">
+                            2
+                        </a>
+<a class="bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-600 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700 relative inline-flex items-center px-4 py-2 border text-sm font-medium" href="#">
+                            3
+                        </a>
+<a class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-sm font-medium text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700" href="#">
+<span class="sr-only">Next</span>
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</a>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>

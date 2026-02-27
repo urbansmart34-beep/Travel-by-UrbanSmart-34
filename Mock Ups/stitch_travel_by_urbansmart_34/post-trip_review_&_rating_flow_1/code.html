@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post-Trip Review | UrbanSmart-34</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13daec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for better aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #94a3b8;
+        }
+        
+        /* Star rating hover effect simulation */
+        .star-rating:hover .star {
+            color: #13daec; 
+        }
+        .star-rating .star:hover ~ .star {
+            color: #d1d5db; /* gray-300 */
+        }
+        
+        /* Smooth transitions */
+        .transition-all-300 {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col antialiased">
+<!-- Top Navigation / Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 py-4 md:px-10">
+<div class="flex items-center gap-3 text-slate-900 dark:text-white">
+<div class="flex items-center justify-center bg-primary/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">commute</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">TRAVEL <span class="text-sm font-medium text-slate-500 dark:text-slate-400">by UrbanSmart-34</span></h2>
+</div>
+<div class="flex items-center gap-4 md:gap-8">
+<button class="hidden md:flex text-slate-500 hover:text-primary font-medium text-sm transition-colors">Help</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/20" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAk4MHEeDzVI9HrDklVvAaAFo8-SdT5gDLfVkc7YeuFK51of3SEK0tnfh3d4b5sbo0gtpTf8_rFuWl6u8tfa5nVjesGJOTLXRLGhXrsVTlLHQ9CsGFBnqlktCKs-1VdZUIpgAhKvC5nviOU17CJ3DWq42GP0j9R0SVvLbbf1F-IM0PcCKSdSpB8QmgSJyD9cUppnEfSa5Hni_QFVKn2HHenUhCKRvOq5bkNIeuNro7w1VsDFo7rRKz6k5Mo6hbZ05rr877fHXmRjqI");'></div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex justify-center py-8 px-4 md:px-8 overflow-y-auto">
+<div class="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Trip Summary (Map & Driver) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Map Card -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="h-48 w-full bg-slate-200 relative">
+<!-- Abstract Map Background -->
+<div class="absolute inset-0 bg-cover bg-center opacity-80" data-alt="Map showing route from downtown to airport" data-location="San Francisco map view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBpLbb3LVkoicrD_WMV25db_CQ6MFFYwrzfMAdFEMm6cVvPPkyB7yb04RP0ZGa22vysVorVK_wTrVWxv27q-4ESU2rnOUZ0XiQsSITjRfo0G0H1V6vKuvx-KAru8IGo5vWqJqe7BUSiW-yLYoKIdwPHzfSHJJaORN_QFPFu1BOIQ1K-zH9swBprcAFSC418X9cjS6x61m1C2DUSmo9t5-DHPkagbjbxzRvbvtoc3aOsXgqFfQ5_vNXJyMQx0H2BVMxJ40ebI3E9e1s");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
+<div class="text-white">
+<p class="text-xs font-medium opacity-80 uppercase tracking-wider">Route Completed</p>
+<p class="font-bold">Downtown <span class="material-symbols-outlined text-sm mx-1 align-middle">arrow_forward</span> SFO Airport</p>
+</div>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-bold text-lg text-slate-900 dark:text-white">Ride with Michael</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Today, 9:41 AM</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-slate-900 dark:text-white">$24.50</p>
+<p class="text-primary text-xs font-medium">UrbanSmart X</p>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 ring-2 ring-white dark:ring-slate-800 shadow-md" data-alt="Driver portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6gz_P9vLVlj_DMwzuCBLMXVR7SiLKgzpp1cWmKgFh3GqrRAPQc8XMxwqY8RYAU0UfvYJwzZgsbbnEKprJ0BL3MeJUI3B2tbVjA-0zGNDtM-n0EZRRbTZcWGhhqxmZ5Ovd4Nhsea-48VHwiU06uBSsvF1TgYxX4qkVe7FMxmH5RkMnTr6A0h8hhH_N0ZdmXYEY2mdwlHsiSwbAGa9HJVBuDeyHMVGYjPKX2ezxsuyAKx_jWItbNiB7cJWpi_9LFnAZt91irQ2YIhA");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-white font-semibold">Toyota Camry</p>
+<div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
+<span class="bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-slate-700 dark:text-slate-300 font-mono">8X9-442</span>
+<span>•</span>
+<span class="flex items-center text-yellow-500"><span class="material-symbols-outlined text-[14px] mr-0.5 fill-current">star</span> 4.9</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Receipt / Help Link (Optional Context) -->
+<div class="hidden lg:block bg-primary/5 dark:bg-primary/10 rounded-xl p-5 border border-primary/10">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">help</span>
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white mb-1">Issue with this trip?</p>
+<p class="text-xs text-slate-600 dark:text-slate-400 mb-3">If you lost an item or had a safety concern, let us know immediately.</p>
+<a class="text-primary text-xs font-bold hover:underline" href="#">Get Help</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Rating Flow -->
+<div class="lg:col-span-8">
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6 md:p-10 h-full flex flex-col justify-between">
+<div class="space-y-8">
+<!-- Header Text -->
+<div class="text-center md:text-left">
+<h1 class="text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white mb-2">How was your ride?</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg">Your feedback helps us improve the UrbanSmart experience.</p>
+</div>
+<!-- Star Rating Interaction -->
+<div class="flex flex-col gap-4 py-4">
+<div aria-label="Star Rating" class="flex items-center justify-center md:justify-start gap-2 md:gap-4 star-rating group cursor-pointer" role="group">
+<!-- Star 1 -->
+<button class="star text-primary transition-colors duration-200 focus:outline-none transform hover:scale-110">
+<span class="material-symbols-outlined text-[48px] md:text-[56px] fill-current" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">star</span>
+</button>
+<!-- Star 2 -->
+<button class="star text-primary transition-colors duration-200 focus:outline-none transform hover:scale-110">
+<span class="material-symbols-outlined text-[48px] md:text-[56px] fill-current" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">star</span>
+</button>
+<!-- Star 3 -->
+<button class="star text-primary transition-colors duration-200 focus:outline-none transform hover:scale-110">
+<span class="material-symbols-outlined text-[48px] md:text-[56px] fill-current" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">star</span>
+</button>
+<!-- Star 4 -->
+<button class="star text-primary transition-colors duration-200 focus:outline-none transform hover:scale-110">
+<span class="material-symbols-outlined text-[48px] md:text-[56px] fill-current" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">star</span>
+</button>
+<!-- Star 5 (Unfilled example) -->
+<button class="star text-slate-300 dark:text-slate-600 hover:text-primary transition-colors duration-200 focus:outline-none transform hover:scale-110">
+<span class="material-symbols-outlined text-[48px] md:text-[56px] fill-current" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;">star</span>
+</button>
+</div>
+<p class="text-center md:text-left text-sm font-medium text-primary">Excellent!</p>
+</div>
+<!-- Attribute Tags -->
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">What went well?</p>
+<div class="flex flex-wrap gap-3">
+<button class="px-4 py-2 rounded-full border border-primary bg-primary/10 text-primary font-medium text-sm transition-all hover:bg-primary hover:text-slate-900 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">check</span>
+                                    On-time
+                                </button>
+<button class="px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 hover:border-primary hover:text-primary bg-transparent text-slate-600 dark:text-slate-400 font-medium text-sm transition-all">
+                                    Clean Vehicle
+                                </button>
+<button class="px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 hover:border-primary hover:text-primary bg-transparent text-slate-600 dark:text-slate-400 font-medium text-sm transition-all">
+                                    Safe Driving
+                                </button>
+<button class="px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 hover:border-primary hover:text-primary bg-transparent text-slate-600 dark:text-slate-400 font-medium text-sm transition-all">
+                                    Friendly Conversation
+                                </button>
+<button class="px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 hover:border-primary hover:text-primary bg-transparent text-slate-600 dark:text-slate-400 font-medium text-sm transition-all">
+                                    Quiet Ride
+                                </button>
+<button class="px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 hover:border-primary hover:text-primary bg-transparent text-slate-600 dark:text-slate-400 font-medium text-sm transition-all">
+                                    Expert Navigation
+                                </button>
+</div>
+</div>
+<!-- Comment Section -->
+<div class="group/input">
+<label class="sr-only" for="comment">Leave a comment</label>
+<div class="relative">
+<textarea class="w-full bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 p-4 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none" id="comment" placeholder="Tell us more about your trip (optional)..." rows="4"></textarea>
+<div class="absolute bottom-3 right-3 text-xs text-slate-400 pointer-events-none">0/500</div>
+</div>
+</div>
+<!-- Media Upload Dropzone -->
+<div class="border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-lg p-6 hover:border-primary hover:bg-primary/5 cursor-pointer transition-all flex flex-col items-center justify-center text-center group/upload">
+<span class="material-symbols-outlined text-3xl text-slate-400 group-hover/upload:text-primary mb-2">add_a_photo</span>
+<p class="text-sm font-medium text-slate-600 dark:text-slate-300">Add a photo</p>
+<p class="text-xs text-slate-400 mt-1">Helpful for lost items or cleanliness reports</p>
+</div>
+</div>
+<!-- Action Bar -->
+<div class="flex flex-col-reverse sm:flex-row items-center justify-end gap-4 mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
+<button class="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 font-medium text-sm px-6 py-3 rounded-lg transition-colors w-full sm:w-auto">
+                            Skip
+                        </button>
+<button class="bg-gradient-to-r from-primary to-[#0ebac9] hover:from-[#11c6d6] hover:to-[#0ca3b0] text-slate-900 font-bold text-sm px-8 py-3 rounded-lg shadow-lg shadow-primary/20 transform active:scale-95 transition-all w-full sm:w-auto flex items-center justify-center gap-2">
+<span>Submit Review</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Simple -->
+<footer class="py-6 text-center text-xs text-slate-400">
+<p>© 2024 UrbanSmart-34. All rights reserved.</p>
+</footer>
+</body></html>

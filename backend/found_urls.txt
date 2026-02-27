@@ -1,0 +1,29 @@
+Found URLs:
+https://o447951.ingest.sentry.io/api/4509632503087104/envelope/?sentry_version=7&sentry_key=c1dfb07d783ad5325c245c1fd3725390&sentry_client=sentry.javascript.browser%2F1.33.7
+https://docs.sentry.io/platforms/javascript/best-practices/browser-extensions/
+http://localhost:8969/stream
+https://spotlightjs.com/sidecar/npx/
+https://github.com/styled-components/styled-components/blob/main/packages/styled-components/src/utils/errors.md#
+https://browser.sentry-cdn.com
+https://js.verygoodvault.com/vgs-collect/2.21.0/vgs-collect.js
+https://payments-online.yoco.com
+https://centinelapi.cardinalcommerce.com/V2/Cruise/Collect
+https://blackbird-web-sdk.netlify.app
+https://11e8855047ee4302b5a367fbb01abf24@o406491.ingest.sentry.io/6676771
+https://redirect-online.yoco.com
+http://www.w3.org/2000/svg
+http://s.io
+http://www.w3.org/2000/svg
+http://www.w3.org/2000/svg
+https://sentry.io/welcome/
+http://www.w3.org/2000/svg
+http://www.w3.org/2000/svg
+https://pay.google.com/gp/p/js/pay.js
+https://applepay.cdn-apple.com/jsapi/1.latest/apple-pay-sdk.js
+http://www.w3.org/2000/svg
+http://www.w3.org/2000/svg
+http://www.w3.org/1998/Math/MathML
+http://www.w3.org/1999/xhtml
+http://www.w3.org/1999/xhtml
+
+Found /api/ paths:

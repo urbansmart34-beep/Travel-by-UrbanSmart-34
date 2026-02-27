@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Issue Tracking Queue - UrbanSmart-34</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d9488", 
+                        "primary-light": "#ccfbf1",
+                        "brand-teal": "#14b8a6",
+                        "brand-blue": "#0ea5e9",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(135deg, #14b8a6 0%, #0ea5e9 100%)',
+                        'brand-gradient-hover': 'linear-gradient(135deg, #0d9488 0%, #0284c7 100%)',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display antialiased">
+<div class="flex h-screen w-full overflow-hidden">
+<div class="relative flex h-full w-72 flex-col bg-white border-r border-slate-200 hidden lg:flex">
+<div class="flex flex-col h-full p-4 justify-between">
+<div class="flex flex-col gap-8">
+<div class="flex items-center px-2 py-2">
+<div class="flex flex-col">
+<h1 class="text-2xl font-black tracking-tighter leading-none bg-clip-text text-transparent bg-brand-gradient">
+                                TRAVEL
+                            </h1>
+<div class="flex items-center gap-1">
+<span class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">by UrbanSmart-34</span>
+</div>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-teal transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-brand-teal transition-colors">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gradient-to-r from-teal-50 to-blue-50 text-teal-900 border-l-4 border-teal-500 shadow-sm" href="#">
+<span class="material-symbols-outlined text-teal-600">toc</span>
+<span class="text-sm font-bold">Issue Queue</span>
+<span class="ml-auto bg-brand-gradient text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm">12</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-teal transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-brand-teal transition-colors">map</span>
+<span class="text-sm font-medium">Live Map</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-teal transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-brand-teal transition-colors">verified_user</span>
+<span class="text-sm font-medium">Driver Approval</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-teal transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-brand-teal transition-colors">payments</span>
+<span class="text-sm font-medium">Financials</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brand-teal transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-brand-teal transition-colors">analytics</span>
+<span class="text-sm font-medium">Reports</span>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 px-3 py-3 bg-slate-50 rounded-xl border border-slate-100">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-9 w-9 shrink-0 bg-slate-200 border-2 border-white shadow-sm" data-alt="Admin user profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3u6W8R9EKwBE3ccp-nFKX8eBpgKZyo2rWR90OH7Z6SuODSPdODB2hGVXDG75bxZICVhJTRMGxpdROAEQsqJnxqdAmVBDexXemYQ2mOfhv74-5KTvdAiEYrGDit0iYiD4UjEYpOMovI_yCg6WF8eU4Ar0V3xTwf-FFxmFtLOu3DEIhSnEAbtjDTsNkhH3XQNpUseNuG7skioQ71oFf6P8jkwcOiTOhxzBoXcruGvPP6BX2EGm8Bke_DHhKIi84DiorDUfIOTBw9nw");'></div>
+<div class="flex flex-col overflow-hidden">
+<p class="text-slate-900 text-sm font-bold leading-tight truncate">Admin User</p>
+<p class="text-slate-500 text-xs font-normal leading-normal truncate">View Profile</p>
+</div>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg h-10 px-4 border border-slate-200 text-slate-600 text-sm font-bold hover:bg-red-50 hover:border-red-200 hover:text-red-600 transition-all">
+<span class="material-symbols-outlined text-lg">logout</span>
+<span>Logout</span>
+</button>
+</div>
+</div>
+</div>
+<main class="flex-1 flex flex-col h-full overflow-hidden bg-background-light">
+<header class="h-auto flex flex-col bg-white border-b border-slate-200">
+<div class="px-6 py-5 flex items-end justify-between gap-4 bg-gradient-to-r from-white via-white to-teal-50/30">
+<div class="flex flex-col gap-1">
+<h2 class="text-2xl font-black text-slate-900 tracking-tight">Issue Tracking Queue</h2>
+<p class="text-slate-500 text-sm">Manage and resolve reported incidents across the platform.</p>
+</div>
+<div class="hidden md:flex items-center gap-2 bg-white px-3 py-1.5 rounded-full border border-teal-100 shadow-sm">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-teal"></span>
+</span>
+<span class="text-xs font-bold text-teal-700 uppercase tracking-wider">System Live</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-200 border-t border-slate-200">
+<div class="bg-white p-4 flex flex-col gap-1 hover:bg-slate-50 transition-colors">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Critical Issues</span>
+<div class="flex items-baseline gap-2">
+<span class="text-2xl font-bold text-slate-900">12</span>
+<span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100">+2 new</span>
+</div>
+</div>
+<div class="bg-white p-4 flex flex-col gap-1 hover:bg-slate-50 transition-colors">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Avg Response</span>
+<div class="flex items-baseline gap-2">
+<span class="text-2xl font-bold text-slate-900">4m 32s</span>
+<span class="text-xs font-medium text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100">-12%</span>
+</div>
+</div>
+<div class="bg-white p-4 flex flex-col gap-1 hover:bg-slate-50 transition-colors">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Open Disputes</span>
+<div class="flex items-baseline gap-2">
+<span class="text-2xl font-bold text-slate-900">8</span>
+<span class="text-xs font-medium text-orange-600 bg-orange-50 px-1.5 py-0.5 rounded border border-orange-100">Action req</span>
+</div>
+</div>
+<div class="bg-white p-4 flex flex-col gap-1 hover:bg-slate-50 transition-colors">
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Resolved Today</span>
+<div class="flex items-baseline gap-2">
+<span class="text-2xl font-bold text-slate-900">45</span>
+<span class="text-xs font-medium text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded border border-blue-100">Target: 50</span>
+</div>
+</div>
+</div>
+</header>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 px-6 py-4 bg-white border-b border-slate-200 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] z-10">
+<div class="flex flex-1 max-w-2xl gap-2">
+<div class="relative flex-1">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined text-xl">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 placeholder-slate-400 transition-shadow" placeholder="Search by Issue ID, User, or Keyword..." type="text"/>
+</div>
+<div class="relative w-48 hidden sm:block">
+<select class="w-full pl-3 pr-10 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 appearance-none cursor-pointer">
+<option>All Categories</option>
+<option>Safety Incident</option>
+<option>Payment Dispute</option>
+<option>Technical Issue</option>
+<option>Driver Conduct</option>
+</select>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined text-xl pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-sm font-medium hover:bg-slate-200 transition-colors whitespace-nowrap">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+<span>Filter</span>
+</button>
+<div class="h-6 w-px bg-slate-300 mx-1"></div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-50 text-red-700 text-sm font-medium border border-red-100 hover:bg-red-100 transition-colors whitespace-nowrap">
+<span class="material-symbols-outlined text-lg filled">error</span>
+<span>Critical (12)</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors whitespace-nowrap">
+<span class="w-2 h-2 rounded-full bg-orange-500 shadow-sm shadow-orange-200"></span>
+<span>High</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition-colors whitespace-nowrap">
+<span class="w-2 h-2 rounded-full bg-yellow-500 shadow-sm shadow-yellow-200"></span>
+<span>Medium</span>
+</button>
+</div>
+</div>
+<div class="flex-1 overflow-auto px-6 py-6">
+<div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500 font-bold">
+<th class="px-6 py-4 w-24">ID</th>
+<th class="px-6 py-4">User / Driver</th>
+<th class="px-6 py-4">Issue Category</th>
+<th class="px-6 py-4">Severity</th>
+<th class="px-6 py-4">Time Open</th>
+<th class="px-6 py-4 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<tr class="group hover:bg-teal-50/30 transition-colors cursor-pointer">
+<td class="px-6 py-4">
+<span class="font-mono text-slate-500 text-sm bg-slate-100 px-1.5 py-0.5 rounded">#394</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-9 w-9 rounded-full bg-slate-200 bg-center bg-cover border border-slate-100" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOCRER7QBXAc8zXPB7c2dyvsxORZS4iZV-Q5KrTfzUazMoBDVRphCOPhJr18Xdz4h7s6w9h8oMqXDGrOq5kvV7xmbLSL6_MAV-oWQgeUbpjmTmnK8_2gGikHJZgBlkxymdRueohb1mlGBum07y8b67h_xdKNj3XYlH8GAaVk9g0G0rNxdXY6ZKVUUgLew35IcL6NmCrBj-zF3R8avdIaHCsHyUjl97QN2KmkELX5pmyX66MVPVuZmSo0lvAIZACArg5VYtcS0ROhk");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-900 group-hover:text-brand-teal transition-colors">Sarah Jenkins</span>
+<span class="text-xs text-slate-500">Rider • 4.9★</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-900">Safety Incident</span>
+<span class="text-xs text-slate-500 truncate max-w-[200px]">Driver behavior report - Aggressive driving</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-700 border border-red-200 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">dangerous</span>
+                                        Critical
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-mono text-red-600 font-bold bg-red-50 px-2 py-0.5 rounded">12m</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-brand-gradient hover:bg-brand-gradient-hover text-white text-xs font-bold px-4 py-2 rounded-lg transition-all shadow-sm shadow-teal-500/20">
+                                        Review
+                                    </button>
+</td>
+</tr>
+<tr class="group hover:bg-teal-50/30 transition-colors cursor-pointer">
+<td class="px-6 py-4">
+<span class="font-mono text-slate-500 text-sm bg-slate-100 px-1.5 py-0.5 rounded">#392</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-9 w-9 rounded-full bg-slate-200 bg-center bg-cover border border-slate-100" data-alt="Driver avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXJ5peM0Hp2jCAYmd3xoWc8yVrjCL5MKv6C-_xqV4b-lMN0xbpd2G6HttGphGCZGPvM0UONLfVXmxzmAL5XLn66PEHg6hfgiU7aqgT3bvAyzHG5Nxwjsd0TnuqmLgEjjDMhbx40xBtIGgn6o_CHc8CQPgrZLVO88f6tHapU9OPRq7VPMPL6gnnFLniLF7uZIsR3P8lzp6IZlHe_BzbychkTyDMGLznPe-rcERUZ89W_75mfSwWmT5QEiaZYa_sH6zoEuvFVZn1reo");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-900 group-hover:text-brand-teal transition-colors">Marcus Cole</span>
+<span class="text-xs text-slate-500">Driver • 4.8★</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-900">Payment Dispute</span>
+<span class="text-xs text-slate-500 truncate max-w-[200px]">Double charge on ride ID-8821</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-700 border border-orange-200 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+                                        High
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-mono text-slate-600">45m</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-white border border-slate-200 hover:bg-slate-50 hover:border-slate-300 text-slate-700 text-xs font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                                        Assign
+                                    </button>
+</td>
+</tr>
+<tr class="group hover:bg-teal-50/30 transition-colors cursor-pointer">
+<td class="px-6 py-4">
+<span class="font-mono text-slate-500 text-sm bg-slate-100 px-1.5 py-0.5 rounded">#388</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-9 w-9 rounded-full bg-slate-200 bg-center bg-cover border border-slate-100" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_wb7DoxvKkoOPYglEuzGGahhkmYklMWQFH8QSuHfJ9huNeg2D4gwi5Ln9vy8SjNrjAh6erzGKZmdzMS3lRWC1C4QExqDpli7r_0Hn7JsUicMs4oY_FK-O-kaDlZUFizD5nZDC-zWAUmkB98ZTIjypD3VSpsTnZc91hVgih6P7NkJKdvzz1KUnYyVGLq5jNozKG6dWjgkfjo7ET692-xaRGgTsjrZF4Q4fD2dOFMgOV3XB-eftTReh1KLo5sm4U6FGti251kYrOF0");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-900 group-hover:text-brand-teal transition-colors">Elena Rodriguez</span>
+<span class="text-xs text-slate-500">Rider • 5.0★</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-900">Technical Issue</span>
+<span class="text-xs text-slate-500 truncate max-w-[200px]">App freezing on map screen</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-700 border border-yellow-200 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">info</span>
+                                        Medium
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-mono text-slate-600">2h 15m</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-white border border-slate-200 hover:bg-slate-50 hover:border-slate-300 text-slate-700 text-xs font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                                        Assign
+                                    </button>
+</td>
+</tr>
+<tr class="group hover:bg-teal-50/30 transition-colors cursor-pointer">
+<td class="px-6 py-4">
+<span class="font-mono text-slate-500 text-sm bg-slate-100 px-1.5 py-0.5 rounded">#385</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-9 w-9 rounded-full bg-slate-200 bg-center bg-cover border border-slate-100" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZAcqk5tShICqioG1k4OYJtcRmTF8dIqCXs4WAGNrDJMxK85wRwZ9tT54FCC28JGk6kObM10F_14CnbmaGdhIvuN1r4YAw61Y3YL-NQDeLRbpswog3wFMWuGQcFPSwkEMmN8sLnEoyqi3pTg26ZiAZQxSZC-tMXRHrE6pViwWDHCFtWO88I0RsKaCv97IjaNQALcyu3bPE0N37SQLE8uh2PS9jVqsIsmSd7EQvPAepiGVUL0la_j8nPu0lYSjf5NEAphUp0crRbuI");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-900 group-hover:text-brand-teal transition-colors">David Chen</span>
+<span class="text-xs text-slate-500">Rider • 4.2★</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-900">Feedback</span>
+<span class="text-xs text-slate-500 truncate max-w-[200px]">Suggestion for new route</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">low_priority</span>
+                                        Low
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-mono text-slate-600">5h 30m</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-white border border-slate-200 hover:bg-slate-50 hover:border-slate-300 text-slate-700 text-xs font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                                        Assign
+                                    </button>
+</td>
+</tr>
+<tr class="group hover:bg-teal-50/30 transition-colors cursor-pointer">
+<td class="px-6 py-4">
+<span class="font-mono text-slate-500 text-sm bg-slate-100 px-1.5 py-0.5 rounded">#381</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="h-9 w-9 rounded-full bg-slate-200 bg-center bg-cover border border-slate-100" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD0RGmzM6Y5qhuHnLEWPSwJPzfG8MmiDmRKYt5JFE5ESTgk--cF2MZ8RygdOn3Z5zcb5Pe8Vnnxwsr2lqZNJsJJL6u0bRC7RZ40PTJBb1dlS_2JjNMWNFnWzhC1rOO6E0ZXrqkgc1gJrDe_Sb9WXeoWhfh5nN8W-D1_oELAR8GRH3FLJK8kL_4jK1lVaJnLmYtZL0HQKpFr0VjCaVr57XLoa-7PGHyDuQt4cDBvA6w1QPpniGjRJIm3qBAnak5ZDpdcTzSam-6nwuo");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-900 group-hover:text-brand-teal transition-colors">Michael Ross</span>
+<span class="text-xs text-slate-500">Driver • 4.5★</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-900">Vehicle Compliance</span>
+<span class="text-xs text-slate-500 truncate max-w-[200px]">Insurance document expired</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-700 border border-red-200 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">dangerous</span>
+                                        Critical
+                                    </span>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-mono text-red-600 font-bold bg-red-50 px-2 py-0.5 rounded">1d 2h</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="bg-brand-gradient hover:bg-brand-gradient-hover text-white text-xs font-bold px-4 py-2 rounded-lg transition-all shadow-sm shadow-teal-500/20">
+                                        Review
+                                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between">
+<span class="text-sm text-slate-500">Showing <span class="font-semibold text-slate-900">1-5</span> of <span class="font-semibold text-slate-900">42</span> issues</span>
+<div class="flex gap-2">
+<button class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-slate-400 cursor-not-allowed text-sm font-medium shadow-sm">Previous</button>
+<button class="px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 hover:border-slate-300 text-sm font-medium shadow-sm transition-colors">Next</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

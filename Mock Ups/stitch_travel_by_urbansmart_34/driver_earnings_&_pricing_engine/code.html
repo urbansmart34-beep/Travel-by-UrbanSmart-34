@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Driver Earnings &amp; Pricing Engine - UrbanSmart-34</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13daec",
+                        "primary-dark": "#0eaebd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light text-slate-900 font-display antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 bg-white px-4 py-3 lg:px-10">
+<div class="flex items-center gap-4 text-slate-900">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[28px]">local_taxi</span>
+</div>
+<h2 class="text-slate-900 text-lg font-bold leading-tight tracking-[-0.015em]">TRAVEL by UrbanSmart-34</h2>
+</div>
+<div class="hidden flex-1 justify-end gap-8 md:flex">
+<div class="flex items-center gap-9">
+<a class="text-slate-600 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Earnings</a>
+<a class="text-slate-600 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Support</a>
+</div>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-background-light text-slate-700 hover:bg-gray-200 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-10 w-10 border-2 border-primary/20" data-alt="Portrait of a smiling male driver" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWpqynAebsDSkO4M9cE6i04GdpMCUtEZolNNDGv_ijqXdOrnlcP869RjqA1tD1KsKAkRELbZO3iqjnjTyBV2ebUvVtdBjNElyxf-6KChQKqgOXaxiCr-Xuj0DYnNh8E_Gj7JBIDC5DOnZZ-VmalMIaI1ec1ONzKBEwpqI1iQ6YUJ7c6CH4Jf9PzNfo-HdDiFR5LDDy8LfBtrCefnllepZPshGoeUUen7BFb7uupVnqeeTL8fs0r-EKDtqsqb4FNLl6wuKXTjcGhLk");'></div>
+</div>
+<!-- Mobile Menu Icon -->
+<button class="flex md:hidden h-10 w-10 items-center justify-center text-slate-700">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-1">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col max-w-[1024px] flex-1">
+<!-- Hero Section -->
+<div class="@container mb-10">
+<div class="flex flex-col gap-6 lg:gap-12 md:flex-row items-center">
+<div class="flex flex-col gap-6 md:w-1/2">
+<div class="flex flex-col gap-3 text-left">
+<div class="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-primary-dark">
+<span class="material-symbols-outlined text-sm">verified</span>
+                                        Transparent Pricing
+                                    </div>
+<h1 class="text-slate-900 text-4xl font-black leading-tight tracking-tight lg:text-5xl">
+                                        Drive Smarter, <br/><span class="text-primary">Earn Better.</span>
+</h1>
+<p class="text-slate-600 text-lg font-normal leading-relaxed">
+                                        Our transparent Pricing Engine rewards top-rated drivers in South Africa. See exactly how your final payout is calculated with no hidden fees.
+                                    </p>
+</div>
+<div class="flex gap-4">
+<button class="flex h-12 items-center justify-center rounded-lg bg-primary px-6 text-slate-900 text-base font-bold shadow-sm hover:bg-primary-dark hover:text-white transition-all">
+                                        Go Online Now
+                                    </button>
+<button class="flex h-12 items-center justify-center rounded-lg bg-white border border-gray-200 px-6 text-slate-700 text-base font-medium hover:bg-gray-50 transition-all">
+                                        View My Tier
+                                    </button>
+</div>
+</div>
+<!-- Hero Image / Visual -->
+<div class="w-full md:w-1/2">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-slate-100">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Abstract view of a car driving on a modern highway at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmnBUchQDgUn6C0rAQCM5nn12hdbFfCqSpupjqqgM28tz2YYw2xlxVftvBMMvJvQBi1HB_qUY6rykXFH8kstUwrlTfgVfZAnHOtkJM1R8_dYh7VfLCkJASLoUZHDJSFsIgYfqueze7uZxZu1MK3EZr4EIW-hOz3wlvj99mbgTt_Lm17PhMFsdjVhqnCM-mLUuS03Hth37PdZ9sZgUnY4YWqKNjJuo70zvismQQVTHEZqr47iipswZ14__004TigSVjNDxBfueL6XU");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+<span class="font-bold text-sm tracking-wider uppercase">Weekly Insight</span>
+</div>
+<p class="font-medium">Top rated drivers earned 15% more last week in Cape Town.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Price Breakdown Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+<!-- Left: Explanation Cards -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<h2 class="text-slate-900 text-2xl font-bold leading-tight">How It Works</h2>
+<p class="text-slate-600 mb-2">Your earnings are based on a base rate, vehicle type, and your driver rating. We believe in complete transparency.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Card 1 -->
+<div class="flex flex-col gap-3 rounded-xl border border-gray-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<h3 class="text-slate-900 font-bold">Base Route Price</h3>
+<p class="text-slate-500 text-sm mt-1">Standard rate per km and minute for the route calculated upfront.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col gap-3 rounded-xl border border-gray-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-purple-50 text-purple-600">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<div>
+<h3 class="text-slate-900 font-bold">Vehicle Multiplier</h3>
+<p class="text-slate-500 text-sm mt-1">Earn more with luxury or larger capacity vehicles (e.g., x1.2 for Vans).</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col gap-3 rounded-xl border border-gray-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-yellow-50 text-yellow-600">
+<span class="material-symbols-outlined">star</span>
+</div>
+<div>
+<h3 class="text-slate-900 font-bold">Rating Bonus</h3>
+<p class="text-slate-500 text-sm mt-1">Maintain a 4.8+ rating to unlock the Gold Tier 5% bonus per trip.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col gap-3 rounded-xl border border-gray-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-red-600">
+<span class="material-symbols-outlined">handshake</span>
+</div>
+<div>
+<h3 class="text-slate-900 font-bold">Platform Fee</h3>
+<p class="text-slate-500 text-sm mt-1">A fixed % used to maintain the app, insurance, and marketing.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Interactive Calculator Visual -->
+<div class="lg:col-span-5">
+<div class="sticky top-6 rounded-2xl bg-white border border-gray-200 shadow-lg overflow-hidden">
+<div class="bg-slate-900 p-6 text-white">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-slate-400 text-xs font-bold uppercase tracking-wider">Sample Trip Receipt</p>
+<h3 class="text-lg font-bold">Trip #JHB-4921</h3>
+</div>
+<div class="rounded bg-white/10 px-2 py-1 text-xs font-medium">Completed</div>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-300">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span>Sandton City → OR Tambo Int.</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<!-- Line Item -->
+<div class="flex justify-between items-center py-2 border-b border-gray-100">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">route</span>
+<span class="text-slate-700 font-medium">Base Fare</span>
+</div>
+<span class="text-slate-900 font-bold">R 100.00</span>
+</div>
+<!-- Line Item -->
+<div class="flex justify-between items-center py-2 border-b border-gray-100">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-purple-500">airport_shuttle</span>
+<div class="flex flex-col">
+<span class="text-slate-700 font-medium">Vehicle Multiplier</span>
+<span class="text-xs text-slate-400">Luxury Van (x1.2)</span>
+</div>
+</div>
+<span class="text-green-600 font-bold">+ R 20.00</span>
+</div>
+<!-- Line Item -->
+<div class="flex justify-between items-center py-2 border-b border-gray-100 bg-yellow-50/50 -mx-6 px-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-yellow-500 fill-current">star</span>
+<div class="flex flex-col">
+<span class="text-slate-900 font-bold">Gold Tier Bonus</span>
+<span class="text-xs text-slate-500">4.9 Star Rating (+5%)</span>
+</div>
+</div>
+<span class="text-green-600 font-bold">+ R 6.00</span>
+</div>
+<!-- Line Item -->
+<div class="flex justify-between items-center py-2 border-b border-gray-100">
+<div class="flex items-center gap-3">
+<div class="group relative flex items-center">
+<span class="material-symbols-outlined text-slate-400 cursor-help">info</span>
+<!-- Simple Tooltip -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden w-32 rounded bg-slate-800 p-2 text-xs text-white group-hover:block z-10">
+                                                    Covers insurance &amp; app maintenance
+                                                </div>
+</div>
+<span class="text-slate-700 font-medium">Platform Fee</span>
+</div>
+<span class="text-red-500 font-bold">- R 15.00</span>
+</div>
+<!-- Total -->
+<div class="mt-2 flex justify-between items-center rounded-lg bg-background-light p-4">
+<span class="text-slate-900 text-lg font-bold">Net Earnings</span>
+<span class="text-primary-dark text-2xl font-black">R 111.00</span>
+</div>
+<button class="mt-2 w-full text-center text-sm font-bold text-primary hover:underline">
+                                        See full calculation history
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Rating Impact Visualizer -->
+<div class="rounded-2xl bg-white p-6 md:p-10 shadow-sm border border-gray-200 mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div class="max-w-lg">
+<h2 class="text-slate-900 text-2xl font-bold mb-2">Unlock Higher Earnings</h2>
+<p class="text-slate-600">Your rating directly impacts your take-home pay. Move up the tiers to decrease platform fees and unlock bonuses.</p>
+</div>
+<div class="flex items-center gap-2 rounded-lg bg-primary/10 px-4 py-2 text-primary-dark font-bold">
+<span class="material-symbols-outlined">emoji_events</span>
+<span>Current Tier: Silver</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Tier 1 -->
+<div class="flex flex-col gap-4 rounded-xl border border-gray-100 bg-background-light p-5 opacity-70">
+<div class="flex justify-between items-center">
+<h3 class="font-bold text-slate-700">Bronze</h3>
+<span class="text-xs font-bold bg-slate-200 text-slate-600 px-2 py-1 rounded">Rating &lt; 4.5</span>
+</div>
+<div class="h-2 w-full rounded-full bg-gray-200">
+<div class="h-full w-full rounded-full bg-slate-400"></div>
+</div>
+<ul class="text-sm text-slate-600 space-y-2">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">check</span> Standard Rates</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">close</span> No Bonuses</li>
+</ul>
+</div>
+<!-- Tier 2 (Current) -->
+<div class="relative flex flex-col gap-4 rounded-xl border-2 border-primary bg-white p-5 shadow-md">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-slate-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                                    YOU ARE HERE
+                                </div>
+<div class="flex justify-between items-center mt-2">
+<h3 class="font-bold text-slate-900 text-lg">Silver</h3>
+<span class="text-xs font-bold bg-primary/20 text-primary-dark px-2 py-1 rounded">Rating 4.5 - 4.7</span>
+</div>
+<div class="h-2 w-full rounded-full bg-gray-200 overflow-hidden">
+<div class="h-full w-3/4 rounded-full bg-primary"></div>
+</div>
+<ul class="text-sm text-slate-700 font-medium space-y-2">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">check_circle</span> Standard Rates</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">trending_up</span> Priority Support</li>
+</ul>
+</div>
+<!-- Tier 3 -->
+<div class="flex flex-col gap-4 rounded-xl border border-yellow-200 bg-yellow-50/30 p-5">
+<div class="flex justify-between items-center">
+<h3 class="font-bold text-yellow-700 text-lg">Gold</h3>
+<span class="text-xs font-bold bg-yellow-100 text-yellow-700 px-2 py-1 rounded">Rating 4.8+</span>
+</div>
+<div class="h-2 w-full rounded-full bg-gray-200">
+<div class="h-full w-0 rounded-full bg-yellow-400"></div>
+</div>
+<ul class="text-sm text-slate-700 space-y-2">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-yellow-600">monetization_on</span> 5% Bonus per Trip</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-yellow-600">diamond</span> Exclusive Routes</li>
+</ul>
+<button class="mt-2 text-xs font-bold text-yellow-700 uppercase tracking-wide hover:underline">
+                                    See Requirements →
+                                </button>
+</div>
+</div>
+</div>
+<!-- FAQ Section -->
+<div class="max-w-3xl mx-auto w-full mb-16">
+<h2 class="text-slate-900 text-2xl font-bold leading-tight mb-6 text-center">Frequently Asked Questions</h2>
+<div class="flex flex-col gap-4">
+<!-- FAQ Item 1 -->
+<details class="group rounded-lg border border-gray-200 bg-white open:bg-gray-50">
+<summary class="flex cursor-pointer items-center justify-between p-4 font-medium text-slate-900">
+<span>When do I get paid?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-slate-600">
+                                    Payouts are processed weekly on Tuesdays. Instant cash-out is available for Gold tier drivers for a small fee.
+                                </div>
+</details>
+<!-- FAQ Item 2 -->
+<details class="group rounded-lg border border-gray-200 bg-white open:bg-gray-50">
+<summary class="flex cursor-pointer items-center justify-between p-4 font-medium text-slate-900">
+<span>What does the Platform Fee cover?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-slate-600">
+                                    The platform fee goes towards app development, 24/7 driver support, marketing to get you more riders, and commercial insurance coverage during trips.
+                                </div>
+</details>
+<!-- FAQ Item 3 -->
+<details class="group rounded-lg border border-gray-200 bg-white open:bg-gray-50">
+<summary class="flex cursor-pointer items-center justify-between p-4 font-medium text-slate-900">
+<span>How is the Base Route Price calculated?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-sm text-slate-600">
+                                    It is calculated based on the estimated distance (km) and time (minutes) of the most efficient route, plus a base flag-fall fee.
+                                </div>
+</details>
+</div>
+</div>
+<!-- Final CTA -->
+<div class="rounded-2xl bg-slate-900 p-8 text-center text-white mb-10 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: radial-gradient(#13daec 1px, transparent 1px); background-size: 20px 20px;"></div>
+<h2 class="relative text-2xl font-bold mb-4">Ready to start earning?</h2>
+<p class="relative text-slate-300 mb-8 max-w-md mx-auto">Join thousands of happy drivers in South Africa using UrbanSmart-34 today.</p>
+<button class="relative h-12 rounded-lg bg-primary px-8 text-slate-900 font-bold hover:bg-white hover:scale-105 transition-all">
+                            Go Online Now
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

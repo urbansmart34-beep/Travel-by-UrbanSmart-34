@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UrbanSmart-34 - User Wallet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0056D2","secondary": "#00A88F","background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(135deg, #0056D2 0%, #00C6A8 100%)',
+                        'brand-gradient-hover': 'linear-gradient(135deg, #0046b0 0%, #00a88f 100%)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c1c1c1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151b2b] px-6 lg:px-10 py-3 shadow-sm">
+<div class="flex items-center gap-3 text-slate-900 dark:text-white">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 relative flex items-center justify-center">
+<svg class="w-full h-full text-[#00A88F]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="flex flex-col -space-y-1">
+<h2 class="text-xl font-black leading-none tracking-tight">
+<span class="text-[#0056D2]">TRAVEL</span>
+</h2>
+<span class="text-[10px] font-semibold text-[#002d5c] dark:text-slate-300 tracking-wide">by UrbanSmart-34</span>
+</div>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">My Trips</a>
+<a class="text-primary text-sm font-bold leading-normal border-b-2 border-primary pb-0.5" href="#">Wallet</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Settings</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-[1280px] mx-auto px-4 md:px-10 py-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+<div class="flex flex-col gap-2">
+<h1 class="text-slate-900 dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">My Wallet</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal max-w-2xl">
+                    Manage your ride earnings, top-up for upcoming trips, and track your financial history securely.
+                </p>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">lock</span>
+<span>Payments secured by 256-bit encryption</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8">
+<div class="lg:col-span-7 flex flex-col justify-between bg-white dark:bg-slate-800 rounded-xl p-0 border border-slate-200 dark:border-slate-700 shadow-sm relative overflow-hidden group">
+<div class="bg-brand-gradient p-6 relative overflow-hidden">
+<div class="absolute -right-10 -top-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 text-white">
+<div class="flex items-center gap-2 mb-2">
+<span class="font-medium text-sm uppercase tracking-wider opacity-90">Available Balance</span>
+<span class="material-symbols-outlined text-white/70 text-[18px] cursor-help" title="Funds available for immediate use">info</span>
+</div>
+<h2 class="text-5xl font-bold tracking-tight text-white">R 2,450.00</h2>
+</div>
+</div>
+<div class="p-6">
+<div class="flex flex-col sm:flex-row gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined">pending</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">Escrowed Funds</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">R 350.00 pending completion of Trip #883</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-center gap-4">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Quick Actions</h3>
+<div class="grid grid-cols-2 gap-4 h-full">
+<button class="flex flex-col items-center justify-center gap-3 p-4 rounded-lg bg-brand-gradient hover:bg-brand-gradient-hover text-white transition-all shadow-md hover:shadow-lg group">
+<div class="p-2 bg-white/20 rounded-full group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</div>
+<span class="font-bold text-sm">Top Up Wallet</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-3 p-4 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-600 transition-all group">
+<div class="p-2 bg-white dark:bg-slate-600 rounded-full shadow-sm group-hover:scale-110 transition-transform text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-[28px]">account_balance</span>
+</div>
+<span class="font-bold text-sm">Withdraw</span>
+</button>
+</div>
+</div>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">October Overview</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+<div class="bg-white dark:bg-slate-800 p-5 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col gap-1 hover:border-secondary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<div class="p-2 bg-green-50 dark:bg-green-900/20 rounded-lg text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<span class="text-xs font-medium text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded">+12.5%</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Earned</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-white">R 5,200.00</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-5 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col gap-1 hover:border-secondary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<div class="p-2 bg-red-50 dark:bg-red-900/20 rounded-lg text-red-600 dark:text-red-400">
+<span class="material-symbols-outlined">trending_down</span>
+</div>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400">vs last month</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Spent</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-white">R 1,100.00</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-5 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col gap-1 hover:border-secondary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<div class="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-primary">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Trips Completed</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-white">12</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-5 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col gap-1 hover:border-secondary/30 transition-colors">
+<div class="flex justify-between items-start mb-2">
+<div class="p-2 bg-orange-50 dark:bg-orange-900/20 rounded-lg text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Upcoming Trips</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-white">2</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+<div class="flex flex-wrap items-center justify-between gap-4 p-5 border-b border-slate-100 dark:border-slate-700">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Recent Transactions</h3>
+<div class="flex gap-2">
+<button class="px-4 py-2 text-sm font-medium rounded-lg bg-primary text-white shadow-sm transition-colors">
+                        All
+                    </button>
+<button class="px-4 py-2 text-sm font-medium rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                        Earnings
+                    </button>
+<button class="px-4 py-2 text-sm font-medium rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                        Spending
+                    </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-700">
+<th class="p-4 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 whitespace-nowrap">Date &amp; Time</th>
+<th class="p-4 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 whitespace-nowrap">Description / ID</th>
+<th class="p-4 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 whitespace-nowrap">Type</th>
+<th class="p-4 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 whitespace-nowrap">Status</th>
+<th class="p-4 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 text-right whitespace-nowrap">Amount</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-700 text-sm">
+<tr class="group hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+<td class="p-4 text-slate-600 dark:text-slate-300 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-slate-900 dark:text-white">Oct 24, 2023</span>
+<span class="text-xs text-slate-500">14:30 PM</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">local_taxi</span>
+</div>
+<div>
+<p class="font-medium text-slate-900 dark:text-white">Trip Payment - #TR-8821</p>
+<p class="text-xs text-slate-500">Carpool: Sandton to Midrand</p>
+</div>
+</div>
+</td>
+<td class="p-4 text-slate-600 dark:text-slate-300">Earnings</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+<span class="w-1.5 h-1.5 rounded-full bg-green-600"></span> Completed
+                                </span>
+</td>
+<td class="p-4 text-right font-bold text-green-600 dark:text-green-400 whitespace-nowrap">
+                                + R 450.00
+                            </td>
+</tr>
+<tr class="group hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+<td class="p-4 text-slate-600 dark:text-slate-300 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-slate-900 dark:text-white">Oct 22, 2023</span>
+<span class="text-xs text-slate-500">09:15 AM</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 shrink-0">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+</div>
+<div>
+<p class="font-medium text-slate-900 dark:text-white">Ride Payment - #TR-8805</p>
+<p class="text-xs text-slate-500">Ride: Centurion to Pretoria</p>
+</div>
+</div>
+</td>
+<td class="p-4 text-slate-600 dark:text-slate-300">Spending</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+<span class="w-1.5 h-1.5 rounded-full bg-green-600"></span> Completed
+                                </span>
+</td>
+<td class="p-4 text-right font-bold text-slate-900 dark:text-white whitespace-nowrap">
+                                - R 120.00
+                            </td>
+</tr>
+<tr class="group hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+<td class="p-4 text-slate-600 dark:text-slate-300 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-slate-900 dark:text-white">Oct 20, 2023</span>
+<span class="text-xs text-slate-500">11:00 AM</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">add_card</span>
+</div>
+<div>
+<p class="font-medium text-slate-900 dark:text-white">Wallet Top-Up</p>
+<p class="text-xs text-slate-500">Credit Card **** 4242</p>
+</div>
+</div>
+</td>
+<td class="p-4 text-slate-600 dark:text-slate-300">Deposit</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+<span class="w-1.5 h-1.5 rounded-full bg-green-600"></span> Success
+                                </span>
+</td>
+<td class="p-4 text-right font-bold text-green-600 dark:text-green-400 whitespace-nowrap">
+                                + R 1,000.00
+                            </td>
+</tr>
+<tr class="group hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+<td class="p-4 text-slate-600 dark:text-slate-300 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-slate-900 dark:text-white">Oct 18, 2023</span>
+<span class="text-xs text-slate-500">16:45 PM</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center text-orange-600 dark:text-orange-400 shrink-0">
+<span class="material-symbols-outlined text-[18px]">timelapse</span>
+</div>
+<div>
+<p class="font-medium text-slate-900 dark:text-white">Trip Escrow - #TR-8830</p>
+<p class="text-xs text-slate-500">Funds held for Trip #8830</p>
+</div>
+</div>
+</td>
+<td class="p-4 text-slate-600 dark:text-slate-300">Escrow Hold</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-orange-50 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400">
+<span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span> Pending
+                                </span>
+</td>
+<td class="p-4 text-right font-bold text-slate-400 dark:text-slate-500 whitespace-nowrap">
+                                (R 350.00)
+                            </td>
+</tr>
+<tr class="group hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+<td class="p-4 text-slate-600 dark:text-slate-300 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-slate-900 dark:text-white">Oct 15, 2023</span>
+<span class="text-xs text-slate-500">08:00 AM</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 shrink-0">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</div>
+<div>
+<p class="font-medium text-slate-900 dark:text-white">Bank Withdrawal</p>
+<p class="text-xs text-slate-500">Transfer to FNB Acc ...8901</p>
+</div>
+</div>
+</td>
+<td class="p-4 text-slate-600 dark:text-slate-300">Withdrawal</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+<span class="w-1.5 h-1.5 rounded-full bg-green-600"></span> Completed
+                                </span>
+</td>
+<td class="p-4 text-right font-bold text-slate-900 dark:text-white whitespace-nowrap">
+                                - R 2,000.00
+                            </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<span class="text-sm text-slate-500 dark:text-slate-400">Showing <span class="font-medium text-slate-900 dark:text-white">1-5</span> of <span class="font-medium text-slate-900 dark:text-white">24</span> transactions</span>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-sm rounded border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700 disabled:opacity-50" disabled="">Previous</button>
+<button class="px-3 py-1 text-sm rounded border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700">Next</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#151b2b] py-8 px-6 lg:px-10">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 text-sm">© 2023 UrbanSmart-34. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-primary text-sm" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-primary text-sm" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-primary text-sm" href="#">Help Center</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Route: Cape Town CBD to Stellenbosch - UrbanSmart-34</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#009B9E", // Teal/Cyan from logo
+                        secondary: "#0066CC", // Blue from logo
+                        accent: "#00C9A7", // Lighter teal accent
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#111827",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1F2937",
+                        "text-light": "#111827",
+                        "text-dark": "#F3F4F6",
+                        "muted-light": "#6B7280",
+                        "muted-dark": "#9CA3AF",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }.hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .text-gradient-brand {
+            background: linear-gradient(90deg, #0066CC 0%, #009B9E 50%, #00C9A7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .bg-gradient-brand {
+             background: linear-gradient(135deg, #0066CC 0%, #009B9E 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark min-h-screen flex flex-col transition-colors duration-200">
+<nav class="bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<div class="flex-shrink-0 flex items-center gap-2">
+<div class="flex items-center gap-2">
+<div class="relative w-8 h-8">
+<span class="material-icons text-secondary text-3xl absolute -left-1">directions_car</span>
+<span class="material-icons text-primary text-xl absolute -top-1 right-0">location_on</span>
+</div>
+<div class="flex flex-col leading-none justify-center">
+<span class="font-extrabold text-2xl text-gradient-brand tracking-tight">TRAVEL</span>
+<span class="text-[0.65rem] text-primary font-medium tracking-wider -mt-0.5">by UrbanSmart-34</span>
+</div>
+</div>
+</div>
+<div class="hidden sm:ml-10 sm:flex sm:space-x-8">
+<a class="border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" href="#">Home</a>
+<a class="border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" href="#">Find Rides</a>
+<a class="border-primary text-primary dark:text-teal-400 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" href="#">Routes</a>
+<a class="border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" href="#">Suggest Route</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-gradient-brand hover:opacity-90 text-white px-4 py-2 rounded-md text-sm font-medium transition-opacity shadow-sm">
+                        Post Trip
+                    </button>
+<div class="relative">
+<button class="p-1 rounded-full text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none">
+<span class="material-icons">notifications</span>
+<span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-500 ring-2 ring-white dark:ring-gray-800"></span>
+</button>
+</div>
+<div class="relative ml-3 flex items-center gap-2 cursor-pointer">
+<div class="h-8 w-8 rounded-full bg-teal-100 dark:bg-teal-900 flex items-center justify-center text-primary dark:text-teal-200 font-medium text-sm">V</div>
+<span class="material-icons text-gray-400 text-sm">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<div class="relative bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-700">
+<div class="absolute inset-0 z-0">
+<img alt="Scenic drive coastal road" class="w-full h-full object-cover opacity-10 dark:opacity-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkzYOHqhV19Xp35lTNCwvS4SLZzkmwlTbkxlPUWqvPNXwuIyr285-c7N83Y6Di1rmdzWh_VXZ4_agJd7s57jEWumNPAjotaTNSaIg8EMl2qIuU0HEGtHa5j3F1jvYmmxPJwgztLFCwdjJo_VemmY8bUSbtT_UOoUHbuAGx6IJKrrJDO6UmosLupugkh1Iu_15inLmkkICHNWjkC6FDMRRPlLdzAxBTSEaTY_B9d0TZ6CRlF45uscFiXtFoi9uYPVE3esYnu-s550c"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-light via-surface-light/90 to-transparent dark:from-surface-dark dark:via-surface-dark/90"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+<div class="flex flex-col lg:flex-row gap-8 lg:items-center">
+<div class="lg:w-2/3">
+<div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-teal-100 text-primary dark:bg-teal-900 dark:text-teal-200 mb-4">
+<span class="material-icons text-sm mr-1">verified</span> Popular Route
+                    </div>
+<h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-text-light dark:text-text-dark mb-4">
+                        Cape Town CBD <span class="text-gray-400 mx-2 font-light">to</span> Stellenbosch
+                    </h1>
+<p class="text-lg text-muted-light dark:text-muted-dark mb-8 max-w-2xl">
+                        Regular daily commutes and weekend wine trips. Connect with verified drivers for a comfortable 45-minute journey through the winelands.
+                    </p>
+<div class="flex flex-wrap gap-6 text-sm text-muted-light dark:text-muted-dark">
+<div class="flex items-center gap-2">
+<span class="material-icons text-primary">schedule</span>
+<span>Avg. 45-60 min</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-icons text-primary">attach_money</span>
+<span>Avg. R120 - R150 per seat</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-icons text-primary">directions_car</span>
+<span>~15 trips daily</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-icons text-primary">eco</span>
+<span>Save ~4kg CO2</span>
+</div>
+</div>
+</div>
+<div class="hidden lg:block lg:w-1/3">
+<div class="bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-6 border border-gray-100 dark:border-gray-700">
+<h3 class="text-lg font-semibold mb-4 text-text-light dark:text-text-dark">Quick Book This Route</h3>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Date</label>
+<div class="relative rounded-md shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-icons text-gray-400 text-sm">calendar_today</span>
+</div>
+<input class="focus:ring-primary focus:border-primary block w-full pl-10 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md" type="date" value="2023-10-27"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Passengers</label>
+<select class="focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md">
+<option>1 Person</option>
+<option>2 People</option>
+<option>3 People</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Time</label>
+<select class="focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md">
+<option>Anytime</option>
+<option>Morning</option>
+<option>Afternoon</option>
+<option>Evening</option>
+</select>
+</div>
+</div>
+<button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-brand hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all" type="button">
+                                Find Available Rides
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:hidden p-4 bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-700 sticky top-16 z-40 shadow-sm">
+<button class="w-full flex items-center justify-center gap-2 py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-brand hover:opacity-90">
+<span class="material-icons text-sm">search</span> Find Rides for This Route
+        </button>
+</div>
+<main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-2xl font-bold text-text-light dark:text-text-dark">Live Trips</h2>
+<a class="text-primary hover:text-secondary text-sm font-medium flex items-center" href="#">
+                            View all 12 <span class="material-icons text-sm ml-1">chevron_right</span>
+</a>
+</div>
+<div class="flex overflow-x-auto pb-4 gap-4 hide-scroll -mx-4 px-4 sm:mx-0 sm:px-0">
+<div class="flex-none w-80 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+<div class="p-5">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<img alt="Driver" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpPW4ZCUFztkWtXgjNo_3SS42otyqoBeWObQVsk-nstqX2JpOe1Su3uGAxAtFtiADYjE9PCk4VpNPTDpsPC2cwJjLfUgdfXxn0p9TCaYWmJoSgXEfcWVS5ItOlE87J75noxwoIl3i17W5WsS8HU392n0gBzzVWmn4UR8xxOelRgNACUQS5y4Y1LlpwO5TWUezK_hxj_xzyKgFpSZzSpxoh6C550-4Noc0MMliC0psEVVDSq37eZkp9udRVcQBrgQeFpyabdrZBovM"/>
+<div>
+<p class="text-sm font-semibold text-text-light dark:text-text-dark">David M.</p>
+<div class="flex items-center text-xs text-yellow-500">
+<span class="material-icons text-sm">star</span>
+<span class="ml-0.5 text-gray-600 dark:text-gray-400 font-medium">4.9 (52)</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="block text-lg font-bold text-secondary">R130</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">per seat</span>
+</div>
+</div>
+<div class="space-y-3 mb-4">
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-center gap-1">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-0.5 h-6 bg-gray-200 dark:bg-gray-600"></div>
+<div class="w-2 h-2 rounded-full border-2 border-primary bg-white dark:bg-gray-800"></div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<div class="flex justify-between text-sm">
+<span class="font-medium text-text-light dark:text-text-dark">08:00</span>
+<span class="text-gray-500 dark:text-gray-400 truncate w-32">Cape Town Station</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="font-medium text-text-light dark:text-text-dark">08:50</span>
+<span class="text-gray-500 dark:text-gray-400 truncate w-32">Stellenbosch Univ.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-3">
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+<span class="material-icons text-sm">airline_seat_recline_normal</span>
+<span>2 seats left</span>
+</div>
+<button class="text-primary text-sm font-medium hover:underline">Book</button>
+</div>
+</div>
+</div>
+<div class="flex-none w-80 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+<div class="p-5">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<img alt="Driver" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwpIctVEJj6syztZxWN30sSUKc3HN-M9EcwovF9n1TWdfcYtEDloxerUwxmxzkpSTrZMoVaKLaXOS8Eqc9lYPQc0Vm5fzSku8Va2Ibk3tm1Op1NZU7nRE_rIa8BII2LTxQ7NDLMHifDztG355lYHxrlNb2OI9OKtUiobmc_bFxNpKQJgpM_YYYGwCFAiBGjGVLE5hGvbPumKJwAz0XN4TAjSPIt5mmisMUzO7s5rozP9k3tahQXNicNes2YyCW4DF7R83PMhltUio"/>
+<div>
+<p class="text-sm font-semibold text-text-light dark:text-text-dark">Sarah L.</p>
+<div class="flex items-center text-xs text-yellow-500">
+<span class="material-icons text-sm">star</span>
+<span class="ml-0.5 text-gray-600 dark:text-gray-400 font-medium">4.8 (120)</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="block text-lg font-bold text-secondary">R120</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">per seat</span>
+</div>
+</div>
+<div class="space-y-3 mb-4">
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-center gap-1">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-0.5 h-6 bg-gray-200 dark:bg-gray-600"></div>
+<div class="w-2 h-2 rounded-full border-2 border-primary bg-white dark:bg-gray-800"></div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<div class="flex justify-between text-sm">
+<span class="font-medium text-text-light dark:text-text-dark">09:30</span>
+<span class="text-gray-500 dark:text-gray-400 truncate w-32">Greenmarket Sq</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="font-medium text-text-light dark:text-text-dark">10:15</span>
+<span class="text-gray-500 dark:text-gray-400 truncate w-32">Technopark</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-3">
+<div class="flex items-center gap-2 text-xs text-green-600 dark:text-green-400 font-medium">
+<span class="material-icons text-sm">bolt</span>
+<span>Instant Booking</span>
+</div>
+<button class="text-primary text-sm font-medium hover:underline">Book</button>
+</div>
+</div>
+</div>
+<div class="flex-none w-80 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+<div class="p-5">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+<span class="material-icons text-gray-500 dark:text-gray-400">person</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-text-light dark:text-text-dark">Thabo N.</p>
+<div class="flex items-center text-xs text-yellow-500">
+<span class="material-icons text-sm">star</span>
+<span class="ml-0.5 text-gray-600 dark:text-gray-400 font-medium">New</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<span class="block text-lg font-bold text-secondary">R115</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">per seat</span>
+</div>
+</div>
+<div class="space-y-3 mb-4">
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-center gap-1">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-0.5 h-6 bg-gray-200 dark:bg-gray-600"></div>
+<div class="w-2 h-2 rounded-full border-2 border-primary bg-white dark:bg-gray-800"></div>
+</div>
+<div class="flex flex-col gap-2 flex-1">
+<div class="flex justify-between text-sm">
+<span class="font-medium text-text-light dark:text-text-dark">17:00</span>
+<span class="text-gray-500 dark:text-gray-400 truncate w-32">Foreshore</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="font-medium text-text-light dark:text-text-dark">18:00</span>
+<span class="text-gray-500 dark:text-gray-400 truncate w-32">Dorp Street</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-3">
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+<span class="material-icons text-sm">pets</span>
+<span>Pets allowed</span>
+</div>
+<button class="text-primary text-sm font-medium hover:underline">Book</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
+<div class="p-6 border-b border-gray-100 dark:border-gray-700">
+<h2 class="text-xl font-bold text-text-light dark:text-text-dark">Route Details</h2>
+</div>
+<div class="relative h-64 w-full bg-gray-100 dark:bg-gray-700">
+<img alt="Map Route Visualization" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGbJLux1l5spXWugnb49_pliblHWMo0kcPLbKnt9ti_c_WYJAfwkCJS-12vjm-c0-W3WfnPEnz-NvYyPOwFr27fn3MBZ4gcSTYfYJQvN09nqpCvOhK_sVqYO3B0A69VGvqJGsm__MJviWd9eqgUsNvnV4p_I73Sm_kULctysA5ddIzmSDCodsb6g6OWaEuZlB-q8H8O41-jX3WLaXFYyWvlDmPtDpyt77W08ctQurRvhlexBVBpigw1OtH8jSsv77k9Qk7CNln0qk"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="bg-white dark:bg-gray-800 text-primary px-4 py-2 rounded-full shadow-lg font-medium text-sm hover:scale-105 transition-transform">View Interactive Map</button>
+</div>
+</div>
+<div class="divide-y divide-gray-100 dark:divide-gray-700">
+<div class="p-6">
+<h3 class="text-lg font-medium text-text-light dark:text-text-dark mb-3 flex items-center gap-2">
+<span class="material-icons text-primary">timer</span> Typical Travel Times
+                            </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-gray-50 dark:bg-gray-900/50 p-4 rounded-lg">
+<span class="block text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide">Morning Rush (07:00 - 09:00)</span>
+<span class="block text-lg font-semibold text-text-light dark:text-text-dark mt-1">55 - 75 min</span>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Heavy traffic on N1 outbound.</p>
+</div>
+<div class="bg-gray-50 dark:bg-gray-900/50 p-4 rounded-lg">
+<span class="block text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide">Off-Peak</span>
+<span class="block text-lg font-semibold text-text-light dark:text-text-dark mt-1">40 - 50 min</span>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Smooth sailing.</p>
+</div>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-lg font-medium text-text-light dark:text-text-dark mb-3 flex items-center gap-2">
+<span class="material-icons text-primary">luggage</span> Luggage Guide
+                            </h3>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Most drivers on this route are commuters in sedans or hatchbacks.</p>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<span class="material-icons text-green-500 text-sm mt-0.5">check_circle</span>
+<span class="text-sm text-gray-600 dark:text-gray-300">Backpacks and laptop bags are always welcome.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons text-yellow-500 text-sm mt-0.5">warning</span>
+<span class="text-sm text-gray-600 dark:text-gray-300">Large suitcases require prior confirmation with the driver.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+<div class="space-y-6">
+<div class="bg-teal-50 dark:bg-teal-900/20 rounded-xl p-6 border border-teal-100 dark:border-teal-800">
+<div class="flex items-center gap-3 mb-3">
+<div class="p-2 bg-teal-100 dark:bg-teal-800 rounded-lg">
+<span class="material-icons text-primary dark:text-teal-300">verified_user</span>
+</div>
+<h3 class="font-bold text-text-light dark:text-text-dark">Safety First</h3>
+</div>
+<p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                        All drivers on this route are ID verified. We monitor trips in real-time for your safety.
+                    </p>
+<a class="text-sm font-medium text-primary hover:text-secondary" href="#">Read our Safety Pledge →</a>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+<h3 class="font-bold text-text-light dark:text-text-dark mb-4">Popular Pickup Points</h3>
+<ul class="space-y-4">
+<li class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-icons text-gray-400 group-hover:text-primary transition-colors text-sm">location_on</span>
+<span class="text-sm text-gray-600 dark:text-gray-300">Cape Town Station</span>
+</div>
+<span class="text-xs bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-gray-500 dark:text-gray-400">CBD</span>
+</li>
+<li class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-icons text-gray-400 group-hover:text-primary transition-colors text-sm">location_on</span>
+<span class="text-sm text-gray-600 dark:text-gray-300">Gardens Centre</span>
+</div>
+<span class="text-xs bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-gray-500 dark:text-gray-400">Gardens</span>
+</li>
+<li class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-icons text-gray-400 group-hover:text-primary transition-colors text-sm">location_on</span>
+<span class="text-sm text-gray-600 dark:text-gray-300">Observatory Lower Main</span>
+</div>
+<span class="text-xs bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-gray-500 dark:text-gray-400">Obs</span>
+</li>
+</ul>
+</div>
+<div class="bg-gradient-brand rounded-xl p-6 text-white shadow-lg">
+<h3 class="font-bold text-lg mb-2">Travel together?</h3>
+<p class="text-teal-100 text-sm mb-4">Share this route with a friend and you both get R50 off your next trip.</p>
+<button class="w-full py-2 bg-white text-secondary rounded-lg text-sm font-bold hover:bg-teal-50 transition-colors">
+                        Share Route
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 pt-12 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+<div>
+<h4 class="font-bold text-text-light dark:text-text-dark mb-4">Company</h4>
+<ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">About Us</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">Press</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-light dark:text-text-dark mb-4">Support</h4>
+<ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">Help Center</a></li>
+<li><a class="hover:text-primary" href="#">Safety</a></li>
+<li><a class="hover:text-primary" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-light dark:text-text-dark mb-4">Drivers</h4>
+<ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">Become a Driver</a></li>
+<li><a class="hover:text-primary" href="#">Insurance</a></li>
+<li><a class="hover:text-primary" href="#">Driver Rules</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-light dark:text-text-dark mb-4">Social</h4>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-icons">facebook</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-icons">camera_alt</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-icons">alternate_email</span></a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="relative w-6 h-6">
+<span class="material-icons text-secondary text-2xl absolute -left-0.5">directions_car</span>
+<span class="material-icons text-primary text-base absolute -top-0.5 right-0">location_on</span>
+</div>
+<div class="flex flex-col leading-none justify-center">
+<span class="font-extrabold text-xl text-gradient-brand tracking-tight">TRAVEL</span>
+<span class="text-[0.55rem] text-primary font-medium tracking-wider -mt-0.5">by UrbanSmart-34</span>
+</div>
+</div>
+<p class="text-sm text-gray-400">© 2023 UrbanSmart-34 Travel Platform. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-6 right-6 z-50">
+<button class="bg-black hover:bg-gray-800 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-105">
+<span class="material-icons">chat_bubble</span>
+</button>
+</div>
+</body></html>

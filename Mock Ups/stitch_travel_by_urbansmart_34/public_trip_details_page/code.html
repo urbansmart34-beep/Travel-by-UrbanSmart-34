@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trip Details - UrbanSmart-34 Travel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#00a0a0", // Teal from the TRAVEL logo
+                        "primary-dark": "#008080", // Darker teal
+                        secondary: "#0066cc", // Blue from the logo car/text
+                        "background-light": "#f9fafb",
+                        "background-dark": "#111827",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1f2937",
+                        "text-light": "#1f2937",
+                        "text-dark": "#f3f4f6",
+                        "muted-light": "#6b7280",
+                        "muted-dark": "#9ca3af",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#374151",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }.map-pattern {
+            background-color: #e5e7eb;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239ca3af' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .dark .map-pattern {
+            background-color: #374151;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239ca3af' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }.text-gradient-logo {
+            background: linear-gradient(to right, #0066cc, #00a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-200">
+<nav class="bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex">
+<div class="flex-shrink-0 flex items-center">
+<div class="flex items-center gap-3">
+<div class="flex flex-col leading-none">
+<div class="flex items-center">
+<span class="material-icons-outlined text-secondary text-3xl mr-1">directions_car</span>
+<span class="font-black text-2xl tracking-tighter text-gradient-logo uppercase">Travel</span>
+</div>
+<span class="text-[0.65rem] font-semibold text-text-light dark:text-text-dark tracking-wide ml-1 -mt-1">by UrbanSmart-34</span>
+</div>
+</div>
+</div>
+<div class="hidden sm:ml-8 sm:flex sm:space-x-8">
+<a class="border-transparent text-muted-light dark:text-muted-dark hover:border-primary hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" href="#">Home</a>
+<a class="border-primary text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" href="#">Find Rides</a>
+<a class="border-transparent text-muted-light dark:text-muted-dark hover:border-primary hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" href="#">Routes</a>
+<a class="border-transparent text-muted-light dark:text-muted-dark hover:border-primary hover:text-primary inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" href="#">Suggest Route</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-gradient-to-r from-secondary to-primary hover:from-blue-700 hover:to-teal-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow-sm transition-all">Post Trip</button>
+<button class="p-1 rounded-full text-muted-light dark:text-muted-dark hover:text-primary focus:outline-none relative">
+<span class="material-icons-outlined">notifications</span>
+<span class="absolute top-1 right-1 block h-2 w-2 rounded-full bg-red-500 ring-2 ring-white dark:ring-surface-dark"></span>
+</button>
+<div class="ml-3 relative">
+<div class="bg-teal-100 dark:bg-teal-900 h-8 w-8 rounded-full flex items-center justify-center text-primary font-bold cursor-pointer">
+                            V
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<nav aria-label="Breadcrumb" class="flex mb-6">
+<ol class="flex items-center space-x-2">
+<li><a class="text-muted-light dark:text-muted-dark hover:text-primary text-sm" href="#">Find Rides</a></li>
+<li class="text-muted-light dark:text-muted-dark">/</li>
+<li><span class="text-primary font-medium text-sm">Johannesburg to Pretoria</span></li>
+</ol>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-6">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark overflow-hidden">
+<div class="p-6 border-b border-border-light dark:border-border-dark">
+<div class="flex justify-between items-start mb-4">
+<h1 class="text-2xl font-bold text-text-light dark:text-text-dark">Wed, 24 Oct</h1>
+<span class="bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-xs font-semibold px-2.5 py-0.5 rounded border border-teal-200 dark:border-teal-800">Confirmed Trip</span>
+</div>
+<div class="relative pl-8 border-l-2 border-dashed border-gray-300 dark:border-gray-600 ml-3 space-y-8 py-2">
+<div class="relative">
+<div class="absolute -left-[41px] bg-surface-light dark:bg-surface-dark p-1">
+<span class="material-icons-outlined text-green-500 text-xl">radio_button_checked</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+<div>
+<p class="text-lg font-semibold">08:00 AM</p>
+<p class="text-muted-light dark:text-muted-dark text-sm">Sandton City Mall, Johannesburg</p>
+</div>
+<a class="text-primary text-sm hover:underline mt-1 sm:mt-0 flex items-center gap-1" href="#map">
+                                        View on map <span class="material-icons-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -left-[41px] bg-surface-light dark:bg-surface-dark p-1">
+<span class="material-icons-outlined text-primary text-xl">location_on</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-start">
+<div>
+<p class="text-lg font-semibold">09:15 AM</p>
+<p class="text-muted-light dark:text-muted-dark text-sm">Menlyn Maine, Pretoria</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-6 mt-8 pt-6 border-t border-border-light dark:border-border-dark">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-teal-50 dark:bg-teal-900/30 rounded-lg text-primary">
+<span class="material-icons-outlined">schedule</span>
+</div>
+<div>
+<p class="text-xs text-muted-light dark:text-muted-dark font-medium uppercase">Duration</p>
+<p class="font-semibold text-sm">1h 15m</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="p-2 bg-teal-50 dark:bg-teal-900/30 rounded-lg text-primary">
+<span class="material-icons-outlined">directions_car</span>
+</div>
+<div>
+<p class="text-xs text-muted-light dark:text-muted-dark font-medium uppercase">Vehicle</p>
+<p class="font-semibold text-sm">Toyota Corolla Cross (White)</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="p-2 bg-teal-50 dark:bg-teal-900/30 rounded-lg text-primary">
+<span class="material-icons-outlined">luggage</span>
+</div>
+<div>
+<p class="text-xs text-muted-light dark:text-muted-dark font-medium uppercase">Luggage</p>
+<p class="font-semibold text-sm">Small Bag Only</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark overflow-hidden" id="map">
+<div class="p-4 border-b border-border-light dark:border-border-dark flex justify-between items-center">
+<h3 class="font-bold text-lg">Route Map</h3>
+<button class="text-sm text-primary font-medium hover:underline">Expand View</button>
+</div>
+<div class="h-64 w-full map-pattern relative">
+<div class="absolute inset-0 flex items-center justify-center">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 400 200">
+<path d="M50 150 Q 150 50 350 80" fill="none" stroke="#00a0a0" stroke-dasharray="8 4" stroke-width="4"></path>
+<circle cx="50" cy="150" fill="#10b981" r="6"></circle>
+<circle cx="350" cy="80" fill="#ef4444" r="6"></circle>
+</svg>
+</div>
+<div class="absolute bottom-4 right-4 flex flex-col gap-2">
+<button class="bg-white dark:bg-gray-800 p-2 rounded shadow text-gray-600 dark:text-gray-300 hover:text-primary">
+<span class="material-icons-outlined text-lg">add</span>
+</button>
+<button class="bg-white dark:bg-gray-800 p-2 rounded shadow text-gray-600 dark:text-gray-300 hover:text-primary">
+<span class="material-icons-outlined text-lg">remove</span>
+</button>
+</div>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1.5 rounded-md text-xs font-medium shadow">
+                            Show traffic
+                        </div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark p-6">
+<h3 class="font-bold text-lg mb-4">Your Driver</h3>
+<div class="flex flex-col sm:flex-row gap-6">
+<div class="flex-shrink-0 flex flex-col items-center">
+<img alt="Driver Portrait" class="h-24 w-24 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPbOVvMOh4eJIbOQwzNkTOPaMD9xJLzlx5cWtdciHz6jhkzIRdwyxKSS2U6HWehV-BfwPRRwfG1MQ3UH7iFu-EaSd7OqnhsHBIim3GSCzqVrv4zLj3Y48VBgQoNXBbnM37qYEkgkY6j4z3PAlQiTAkDD7sz49prvTraOLbTA4UdB9Loi8o74OHpUBMSfw4oZTmON7qdlfh6nhJ3RabPC6Y7lSuqKgauFRX5X6Il7owgzgaFAtxr2gZq1rbSVe62kLoPNLnSnvp-T4"/>
+<div class="mt-2 flex items-center bg-yellow-100 dark:bg-yellow-900 px-2 py-0.5 rounded text-xs font-bold text-yellow-800 dark:text-yellow-200 gap-1">
+<span class="material-icons-outlined text-sm">star</span> 4.8
+                            </div>
+</div>
+<div class="flex-grow">
+<div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+<div>
+<h4 class="text-xl font-bold">Vukosi Makhubele</h4>
+<p class="text-sm text-muted-light dark:text-muted-dark">Member since 2021 • 342 Rides</p>
+</div>
+<div class="flex gap-2">
+<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200" title="ID Verified">
+<span class="material-icons-outlined text-sm mr-1">verified_user</span> ID Verified
+                                    </span>
+<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200" title="Email Verified">
+<span class="material-icons-outlined text-sm mr-1">mark_email_read</span> Email
+                                    </span>
+</div>
+</div>
+<p class="text-muted-light dark:text-muted-dark text-sm leading-relaxed mb-4">
+                                "Hi! I'm a software developer commuting daily. I enjoy good music and quiet rides in the morning. I'm punctual and my car is always clean. Happy to chat if you want, or respect your silence if you need to work."
+                            </p>
+<div class="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3">
+<h5 class="text-xs font-semibold uppercase text-muted-light dark:text-muted-dark mb-2">Driver Preferences</h5>
+<div class="flex flex-wrap gap-3">
+<span class="flex items-center text-xs text-text-light dark:text-text-dark gap-1 opacity-75">
+<span class="material-icons-outlined text-sm">chat_bubble</span> Chatty
+                                    </span>
+<span class="flex items-center text-xs text-text-light dark:text-text-dark gap-1 opacity-75">
+<span class="material-icons-outlined text-sm">music_note</span> Music
+                                    </span>
+<span class="flex items-center text-xs text-text-light dark:text-text-dark gap-1 opacity-75">
+<span class="material-icons-outlined text-sm">smoke_free</span> No Smoking
+                                    </span>
+<span class="flex items-center text-xs text-text-light dark:text-text-dark gap-1 opacity-75">
+<span class="material-icons-outlined text-sm">pets</span> No Pets
+                                    </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark p-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-bold text-lg">Reviews (12)</h3>
+<a class="text-sm text-primary hover:underline" href="#">View all</a>
+</div>
+<div class="space-y-6">
+<div class="border-b border-border-light dark:border-border-dark pb-6 last:border-0 last:pb-0">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center text-purple-600 dark:text-purple-300 text-xs font-bold">
+                                        JD
+                                    </div>
+<div>
+<p class="text-sm font-semibold">John Doe</p>
+<p class="text-xs text-muted-light dark:text-muted-dark">Oct 20, 2023</p>
+</div>
+</div>
+<div class="flex text-yellow-400">
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+</div>
+</div>
+<p class="text-sm text-muted-light dark:text-muted-dark">Great ride! Vukosi was on time and very friendly. The car was comfortable. Would definitely ride again.</p>
+</div>
+<div class="border-b border-border-light dark:border-border-dark pb-6 last:border-0 last:pb-0">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-3">
+<div class="h-8 w-8 rounded-full bg-pink-100 dark:bg-pink-900 flex items-center justify-center text-pink-600 dark:text-pink-300 text-xs font-bold">
+                                        SM
+                                    </div>
+<div>
+<p class="text-sm font-semibold">Sarah M.</p>
+<p class="text-xs text-muted-light dark:text-muted-dark">Oct 15, 2023</p>
+</div>
+</div>
+<div class="flex text-yellow-400">
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm">star</span>
+<span class="material-icons-outlined text-sm text-gray-300 dark:text-gray-600">star</span>
+</div>
+</div>
+<p class="text-sm text-muted-light dark:text-muted-dark">Smooth journey, got me there safely. Thanks!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1">
+<div class="sticky top-24">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-lg border border-border-light dark:border-border-dark overflow-hidden">
+<div class="p-6 border-b border-border-light dark:border-border-dark bg-gray-50 dark:bg-gray-800/30">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-sm text-muted-light dark:text-muted-dark">Total price per seat</p>
+<div class="flex items-baseline gap-1">
+<span class="text-3xl font-bold text-primary">R150.00</span>
+<span class="text-xs text-muted-light dark:text-muted-dark">ZAR</span>
+</div>
+</div>
+<span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-2 py-1 rounded font-medium">Best Value</span>
+</div>
+</div>
+<div class="p-6 space-y-6">
+<div>
+<label class="block text-sm font-medium text-text-light dark:text-text-dark mb-2">Seats Required</label>
+<div class="flex items-center justify-between bg-background-light dark:bg-background-dark p-1 rounded-lg border border-border-light dark:border-border-dark">
+<button class="p-2 rounded-md hover:bg-white dark:hover:bg-gray-700 text-muted-light dark:text-muted-dark disabled:opacity-50">
+<span class="material-icons-outlined">remove</span>
+</button>
+<span class="font-bold text-lg">1</span>
+<button class="p-2 rounded-md hover:bg-white dark:hover:bg-gray-700 text-primary">
+<span class="material-icons-outlined">add</span>
+</button>
+</div>
+<p class="text-xs text-red-500 mt-2 flex items-center gap-1">
+<span class="material-icons-outlined text-xs">local_fire_department</span> Only 2 seats left!
+                                </p>
+</div>
+<div class="space-y-2 text-sm">
+<div class="flex justify-between text-muted-light dark:text-muted-dark">
+<span>Ride Contribution</span>
+<span>R140.00</span>
+</div>
+<div class="flex justify-between text-muted-light dark:text-muted-dark">
+<span>Service Fee</span>
+<span>R10.00</span>
+</div>
+<div class="border-t border-border-light dark:border-border-dark pt-2 mt-2 flex justify-between font-bold text-text-light dark:text-text-dark">
+<span>Total</span>
+<span>R150.00</span>
+</div>
+</div>
+<button class="w-full bg-gradient-to-r from-secondary to-primary hover:from-blue-700 hover:to-teal-600 text-white font-bold py-3.5 px-4 rounded-lg shadow-md transition transform active:scale-95 flex justify-center items-center gap-2">
+                                Request to Book
+                                <span class="material-icons-outlined text-sm">arrow_forward</span>
+</button>
+<div class="text-center">
+<p class="text-xs text-muted-light dark:text-muted-dark flex items-center justify-center gap-1">
+<span class="material-icons-outlined text-sm text-green-500">gpp_good</span> Secure payment &amp; verified driver
+                                </p>
+</div>
+</div>
+<div class="bg-teal-50 dark:bg-teal-900/20 p-4 border-t border-teal-100 dark:border-teal-900">
+<h4 class="text-sm font-semibold text-primary mb-1">Safety First</h4>
+<p class="text-xs text-muted-light dark:text-muted-dark">This trip is monitored by UrbanSmart-34 safety protocols. Emergency assistance is available in-app.</p>
+</div>
+</div>
+<div class="mt-4 flex justify-center">
+<button class="text-sm text-muted-light dark:text-muted-dark hover:text-primary flex items-center gap-2">
+<span class="material-icons-outlined">share</span> Share this trip
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<h2 class="text-xl font-bold mb-6 text-text-light dark:text-text-dark">Other rides to Pretoria</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<a class="block bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark hover:border-primary transition-colors p-4" href="#">
+<div class="flex justify-between items-start mb-3">
+<div>
+<p class="font-bold text-lg">09:30 AM</p>
+<p class="text-xs text-muted-light dark:text-muted-dark">Rosebank -&gt; Hatfield</p>
+</div>
+<span class="font-bold text-primary">R160</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-muted-light dark:text-muted-dark mb-4">
+<img alt="Driver" class="h-6 w-6 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKHfwGG5IWPTdQ--8joVetm7S-tpHISB6KipEIu3D97pM3IxDeoAsv8689uF9IqKSgrUUYpnicKhB-yySQJxHJGTpt8ulKnfxYZ_0KriSl0O7-K2N2usl42dN5xiysl4kRdtv2nQHu5Uj2m3CnNFiAO1dklKlovjaUdbJ0N2YWthb1_9ealmOlb2E8BSTV23ff5_YhvSlhBDShEcSObNi6TCgYPCPdBKha0Q5iiBMBXh8jTNHn8Q8LXGfRpD58IS9y7XBm8vylz2M"/>
+<span>Thabo M.</span>
+<span class="flex items-center text-xs ml-auto">
+<span class="material-icons-outlined text-sm mr-1">star</span> 4.9
+                         </span>
+</div>
+</a>
+<a class="block bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark hover:border-primary transition-colors p-4" href="#">
+<div class="flex justify-between items-start mb-3">
+<div>
+<p class="font-bold text-lg">11:00 AM</p>
+<p class="text-xs text-muted-light dark:text-muted-dark">JHB Central -&gt; PTA Central</p>
+</div>
+<span class="font-bold text-primary">R130</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-muted-light dark:text-muted-dark mb-4">
+<div class="h-6 w-6 rounded-full bg-orange-200 text-orange-700 flex items-center justify-center text-xs font-bold">K</div>
+<span>Kevin L.</span>
+<span class="flex items-center text-xs ml-auto">
+<span class="material-icons-outlined text-sm mr-1">star</span> 4.5
+                         </span>
+</div>
+</a>
+<a class="block bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark hover:border-primary transition-colors p-4" href="#">
+<div class="flex justify-between items-start mb-3">
+<div>
+<p class="font-bold text-lg">02:15 PM</p>
+<p class="text-xs text-muted-light dark:text-muted-dark">Sandton -&gt; Menlyn</p>
+</div>
+<span class="font-bold text-primary">R155</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-muted-light dark:text-muted-dark mb-4">
+<img alt="Driver" class="h-6 w-6 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvUtrCaU-vebnwnU2Fb1dTEH-bnZX96tzUksE2ydmrYN6yVil1Zzs007ez2KelO24CE-uC8rBfguVoCu0wbv6S8GL1SkGdF5N2iIvzt7FQJTU_u0JcwmYjbfn4qRxrd9pSUw4uG1NxGrRniOMI4Pm2Nc0KjDnyJcIOTK6f4vhquyjw9PAiziteOk9zWfLC3MGJOHlYgh61KofCMyfbTzPJsaLI0m_JKbV7iCXWf2jkRXbN-j1hYzEiwwbGXAG8yE866Ugy5gCjDmY"/>
+<span>Lerato P.</span>
+<span class="flex items-center text-xs ml-auto">
+<span class="material-icons-outlined text-sm mr-1">star</span> 5.0
+                         </span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="fixed bottom-4 right-4 lg:hidden">
+<button class="bg-primary hover:bg-primary-dark text-white rounded-full p-4 shadow-lg flex items-center justify-center">
+<span class="material-icons-outlined">bookmark_add</span>
+</button>
+</div>
+</body></html>

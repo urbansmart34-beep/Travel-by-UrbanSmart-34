@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UrbanSmart-34 - Settings &amp; Privacy</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13daec",
+                        "primary-dark": "#0ea5b5",
+                        "brand-teal": "#13daec",
+                        "brand-blue": "#3b82f6",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(to right, #13daec, #3b82f6)',
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .bg-brand-gradient {
+                background-image: linear-gradient(135deg, #13daec 0%, #3b82f6 100%);
+            }
+            .text-brand-gradient {
+                background: linear-gradient(135deg, #13daec 0%, #3b82f6 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }input[type="checkbox"]:checked {
+                background-image: linear-gradient(135deg, #13daec 0%, #3b82f6 100%);
+                border-color: transparent;
+            }
+            input[type="checkbox"]:focus {
+                --tw-ring-color: #13daec;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-slate-100 min-h-screen flex overflow-hidden">
+<aside class="hidden lg:flex flex-col w-72 bg-white dark:bg-[#1a2c2e] border-r border-slate-200 dark:border-slate-800 h-screen fixed left-0 top-0 overflow-y-auto z-20">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-brand-gradient flex items-center justify-center text-white font-black text-xl shadow-lg shadow-brand-teal/20">
+                    U
+                </div>
+<div>
+<h1 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">TRAVEL <span class="font-normal text-slate-500 text-xs block">by UrbanSmart-34</span></h1>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-brand-teal transition-colors">person</span>
+<span class="font-medium text-sm">Profile</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-brand-teal/10 text-brand-teal dark:text-brand-teal rounded-lg transition-colors relative" href="#">
+<div class="absolute left-0 h-6 w-1 bg-brand-gradient rounded-r-full"></div>
+<span class="material-symbols-outlined text-brand-teal" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-medium text-sm text-transparent bg-clip-text bg-brand-gradient">Privacy &amp; Data</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-brand-teal transition-colors">lock</span>
+<span class="font-medium text-sm">Security</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-brand-teal transition-colors">notifications</span>
+<span class="font-medium text-sm">Notifications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-brand-teal transition-colors">payments</span>
+<span class="font-medium text-sm">Payment Methods</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 mb-3">
+<div class="h-10 w-10 rounded-full bg-cover bg-center" data-alt="User profile picture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBfPrfTxrmfplrFhukGcbG5H1ZpvDbQwTKkuHNAIrtbNCVuRl_jemAtuax9lpfHYfBbndqZj1pCXSmnAbwMYT5AyP7OKVjH7x1Tog6lVvpCKza163HUtHwDBUAOjOgY7fPXyqbNCQR6JsXiJZXkOfHcH1qStFVbXzHVKvOY6MqxXqUCESrpqSbuQCBDW9ZJN1f8uYi8E9MhaBJjwXTGAnPV-QJdpBAeFt54UZyD4YOFn4MFsY4md0sMto0iPVjY55Nj2sF9TTc_aVQ');"></div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold text-slate-900 dark:text-white truncate">Alex Morgan</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 truncate">alex.m@example.com</p>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-[18px]">logout</span>
+                Log Out
+            </button>
+</div>
+</aside>
+<main class="flex-1 ml-0 lg:ml-72 h-full overflow-y-auto bg-background-light dark:bg-background-dark">
+<div class="max-w-5xl mx-auto px-6 py-10 lg:px-12">
+<div class="mb-8">
+<nav class="flex items-center text-sm text-slate-500 mb-4">
+<a class="hover:text-brand-teal transition-colors" href="#">Settings</a>
+<span class="mx-2 text-slate-300">/</span>
+<span class="text-slate-900 dark:text-white font-medium">Privacy</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Privacy Settings</h1>
+<p class="mt-2 text-slate-500 dark:text-slate-400">Manage how your profile and ride data are shared on UrbanSmart-34.</p>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<section class="bg-white dark:bg-[#1a2c2e] rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="px-6 py-5 border-b border-slate-100 dark:border-slate-800 flex items-center gap-3">
+<div class="p-2 bg-brand-teal/10 rounded-lg text-brand-teal">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Profile Visibility</h2>
+</div>
+<div class="p-6 space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex flex-col gap-1 pr-4">
+<label class="text-base font-medium text-slate-900 dark:text-white" for="photo-vis">Show profile photo to drivers</label>
+<p class="text-sm text-slate-500 dark:text-slate-400">Your photo helps drivers identify you during pickup.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="photo-vis" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-brand-gradient"></div>
+</label>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800 w-full"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col gap-1 pr-4">
+<label class="text-base font-medium text-slate-900 dark:text-white" for="ride-history">Share ride history publicly</label>
+<p class="text-sm text-slate-500 dark:text-slate-400">Allow friends to see your past trips and carbon savings.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" id="ride-history" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-brand-gradient"></div>
+</label>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-[#1a2c2e] rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="px-6 py-5 border-b border-slate-100 dark:border-slate-800 flex items-center gap-3">
+<div class="p-2 bg-brand-teal/10 rounded-lg text-brand-teal">
+<span class="material-symbols-outlined">share_location</span>
+</div>
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Data Sharing</h2>
+</div>
+<div class="p-6 space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex flex-col gap-1 pr-4">
+<label class="text-base font-medium text-slate-900 dark:text-white" for="loc-tracking">Allow real-time location tracking</label>
+<p class="text-sm text-slate-500 dark:text-slate-400">Required for safety features like "Share My Ride" and SOS.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="loc-tracking" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-brand-gradient"></div>
+</label>
+</div>
+<div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg flex gap-3 border border-blue-100 dark:border-blue-900/50">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400 shrink-0">info</span>
+<p class="text-sm text-blue-700 dark:text-blue-300 leading-relaxed">
+                                We only share your precise location with your driver during an active ride. Your location data is anonymized after the trip is completed.
+                            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex flex-col gap-1 pr-4">
+<label class="text-base font-medium text-slate-900 dark:text-white" for="analytics-share">Share anonymous data for traffic analysis</label>
+<p class="text-sm text-slate-500 dark:text-slate-400">Help us improve urban mobility by sharing aggregate trip data.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="analytics-share" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-brand-gradient"></div>
+</label>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-[#1a2c2e] rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="px-6 py-5 border-b border-slate-100 dark:border-slate-800 flex items-center gap-3">
+<div class="p-2 bg-brand-teal/10 rounded-lg text-brand-teal">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Communication Preferences</h2>
+</div>
+<div class="p-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Transactional</h3>
+<div class="flex items-center gap-3">
+<input checked="" class="w-5 h-5 border-slate-300 rounded focus:ring-offset-0 focus:ring-0 dark:bg-slate-800 dark:border-slate-600" id="email-receipts" type="checkbox"/>
+<label class="text-slate-700 dark:text-slate-200 font-medium" for="email-receipts">Email Ride Receipts</label>
+</div>
+<div class="flex items-center gap-3">
+<input checked="" class="w-5 h-5 border-slate-300 rounded focus:ring-offset-0 focus:ring-0 dark:bg-slate-800 dark:border-slate-600" id="sms-updates" type="checkbox"/>
+<label class="text-slate-700 dark:text-slate-200 font-medium" for="sms-updates">SMS Trip Updates</label>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Marketing</h3>
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 border-slate-300 rounded focus:ring-offset-0 focus:ring-0 dark:bg-slate-800 dark:border-slate-600" id="push-promos" type="checkbox"/>
+<label class="text-slate-700 dark:text-slate-200 font-medium" for="push-promos">Push Promotions &amp; Discounts</label>
+</div>
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 border-slate-300 rounded focus:ring-offset-0 focus:ring-0 dark:bg-slate-800 dark:border-slate-600" id="email-news" type="checkbox"/>
+<label class="text-slate-700 dark:text-slate-200 font-medium" for="email-news">Weekly Travel Newsletter</label>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="flex items-center justify-end gap-4 pt-4 pb-12">
+<button class="px-6 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                        Cancel
+                    </button>
+<button class="px-6 py-2.5 rounded-lg bg-brand-gradient hover:opacity-90 text-white font-bold shadow-lg shadow-brand-teal/25 transition-all">
+                        Save Changes
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<button class="lg:hidden fixed bottom-6 right-6 h-14 w-14 rounded-full bg-brand-gradient text-white shadow-xl shadow-brand-teal/40 flex items-center justify-center z-50">
+<span class="material-symbols-outlined">menu</span>
+</button>
+
+</body></html>
