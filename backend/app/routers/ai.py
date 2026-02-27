@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from app.services.minimax import chat_completion
+from app.services.gemini import chat_completion
 from app.services.supabase_client import supabase  # Import the shared client
 
 router = APIRouter(
@@ -11,13 +11,13 @@ router = APIRouter(
 
 class ChatRequest(BaseModel):
     messages: list
-    model: str = "abab6.5-chat"
+    model: str = "gemini-1.5-flash"
     temperature: float = 0.7
 
 @router.post("/chat")
 async def chat(request: ChatRequest):
     """
-    Proxy chat requests to Minimax API, injecting real trip data context.
+    Proxy chat requests to Gemini API, injecting real trip data context.
     """
     
     # 1. Fetch available trips from Supabase
@@ -54,16 +54,10 @@ RULES:
 5. If asked to book, guide them to click the 'book' button on the trip details page (you cannot book directly).
 """
 
-    # 3. Prepend System Message to the interaction
-    # Minimax expects messages as a list of objects. We'll add a 'system' role or just a leading user/assistant pair if system isn't supported, 
-    # but Minimax v2 usually supports 'system' or we can just prepend it to the first user message or as a standalone logic.
-    # Let's try adding it as a 'system' role first, or if that fails, prepending to the first user message.
-    # Safe bet: Prepend a "Developer" or strict instruction context if 'system' role support is ambiguous in this specific client wrapper.
-    # Standard practice for many LLMs is a system message.
-    
+    # 3. Handle System Roles for Gemini (handled internally in our wrapper)
     context_messages = [{"role": "system", "content": system_prompt}] + request.messages
 
-    # 4. Call Minimax
+    # 4. Call Gemini
     response = chat_completion(
         messages=context_messages,
         model=request.model,
